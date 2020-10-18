@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MESSI_DUAL.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,14 +49,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frm_admincoordenades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frm_admincoordenades.Designer.cs">
+      <DependentUpon>frm_admincoordenades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_admingestiodispositius.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_admingestiodispositius.Designer.cs">
+      <DependentUpon>frm_admingestiodispositius.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_admingestiousuaris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_admingestiousuaris.Designer.cs">
+      <DependentUpon>frm_admingestiousuaris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_opcionsadminisitracio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_opcionsadminisitracio.Designer.cs">
+      <DependentUpon>frm_opcionsadminisitracio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pantallaprincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pantallaprincipal.Designer.cs">
+      <DependentUpon>frm_pantallaprincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_splash.Designer.cs">
+      <DependentUpon>frm_splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_validacioadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_validacioadmin.Designer.cs">
+      <DependentUpon>frm_validacioadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_validaciousuari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_validaciousuari.Designer.cs">
+      <DependentUpon>frm_validaciousuari.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_admincoordenades.resx">
+      <DependentUpon>frm_admincoordenades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_admingestiodispositius.resx">
+      <DependentUpon>frm_admingestiodispositius.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_admingestiousuaris.resx">
+      <DependentUpon>frm_admingestiousuaris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_opcionsadminisitracio.resx">
+      <DependentUpon>frm_opcionsadminisitracio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pantallaprincipal.resx">
+      <DependentUpon>frm_pantallaprincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_splash.resx">
+      <DependentUpon>frm_splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_validacioadmin.resx">
+      <DependentUpon>frm_validacioadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_validaciousuari.resx">
+      <DependentUpon>frm_validaciousuari.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +144,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cs_log\cs_log.csproj">
+      <Project>{67da3bbd-79b1-4072-8c21-9f5b8c548bd1}</Project>
+      <Name>cs_log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MESSI_FormBase\MESSI_FormBase.csproj">
+      <Project>{45d2e5e8-fce8-4575-a325-db19c3360f94}</Project>
+      <Name>MESSI_FormBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

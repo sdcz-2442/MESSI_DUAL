@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MESSI_DUAL
 {
-    public partial class Form1 : Form
+    public partial class frm_pantallaprincipal : MESSI_FormBase.frm_base
     {
-        public Form1()
+        public frm_pantallaprincipal()
         {
             InitializeComponent();
+        }
+
+        private void frm_pantallaprincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

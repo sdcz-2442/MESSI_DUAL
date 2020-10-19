@@ -28,6 +28,7 @@ namespace MESSI_DUAL
         {
             String usuari = "PROVA";
             String pass = "12345";
+            //cuo
 
             bool valid = (tbx_usuari.Text == usuari && tbx_password.Text == pass);
 

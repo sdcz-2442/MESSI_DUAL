@@ -23,24 +23,28 @@ namespace MESSI_DUAL
 
         }
 
-
         int intents = 0;
         private void btn_validaruser_Click(object sender, EventArgs e)
         {
             String usuari = "PROVA";
             String pass = "12345";
-            String strData = "yyyyMMdd";
-            String strHora = "HHmmss";
-            StringBuilder sbNewLine = new StringBuilder();
 
             bool valid = (tbx_usuari.Text == usuari && tbx_password.Text == pass);
 
             if (!valid)
             {
-                using (StreamWriter streamwriter = new StreamWriter("log_error.log"))
+                String path = @"C:\Users\Portatil Yeyizo\Desktop\log_error.txt";
+
+                using (StreamWriter mylogs = File.AppendText(path))
                 {
-                    streamwriter.WriteLine(DateTime.Now.ToString(strData) + ":" + DateTime.Now.ToString(strHora) + ":" + tbx_usuari.Text + " \n");
-                    
+                    DateTime dateTime = new DateTime();
+                    dateTime = DateTime.Now;
+                    string strDate = Convert.ToDateTime(dateTime).ToString("yyyyMMdd:HHmmss:");
+
+                    mylogs.WriteLine(strDate + tbx_usuari.Text);
+
+                    mylogs.Close();
+
                 }
 
                 MessageBox.Show("Login details are incorrect");
@@ -61,6 +65,11 @@ namespace MESSI_DUAL
                 this.Hide();
                 new frm_pantallaprincipal().Show();
             }
+
+        }
+
+        private void lbl_login_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -42,19 +42,22 @@
             this.lbl_nom.AutoSize = true;
             this.lbl_nom.Font = new System.Drawing.Font("Gill Sans Nova", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
-            this.lbl_nom.Location = new System.Drawing.Point(195, 150);
+            this.lbl_nom.Location = new System.Drawing.Point(260, 185);
+            this.lbl_nom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nom.Name = "lbl_nom";
-            this.lbl_nom.Size = new System.Drawing.Size(222, 83);
+            this.lbl_nom.Size = new System.Drawing.Size(279, 104);
             this.lbl_nom.TabIndex = 0;
             this.lbl_nom.Text = "MESSI";
             // 
             // pgb_splash
             // 
-            this.pgb_splash.Location = new System.Drawing.Point(189, 324);
+            this.pgb_splash.Location = new System.Drawing.Point(252, 399);
+            this.pgb_splash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pgb_splash.Name = "pgb_splash";
-            this.pgb_splash.Size = new System.Drawing.Size(412, 10);
+            this.pgb_splash.Size = new System.Drawing.Size(549, 12);
             this.pgb_splash.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgb_splash.TabIndex = 1;
+            this.pgb_splash.Click += new System.EventHandler(this.pgb_splash_Click);
             // 
             // tmr_splash
             // 
@@ -64,24 +67,26 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(398, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(531, 66);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(251, 308);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // frm_splash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pgb_splash);
             this.Controls.Add(this.lbl_nom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_splash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MESSI";

@@ -38,7 +38,7 @@ namespace MESSI_DUAL
             if (timeLeft > 0)
             {
                 timeLeft = timeLeft - 1;
-                pgb_splash.Value = pgb_splash.Value + 5;
+                pgb_splash.Value = pgb_splash.Value + 10;
             }
             else
             {
@@ -56,6 +56,11 @@ namespace MESSI_DUAL
                 new frm_validacioadmin().Show();
                 this.Hide();
             }
+        }
+
+        private void pgb_splash_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

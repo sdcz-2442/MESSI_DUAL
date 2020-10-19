@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESSI_DUAL", "MESSI_DUAL.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESSI_FormBase", "..\MESSI_FormBase\MESSI_FormBase.csproj", "{45D2E5E8-FCE8-4575-A325-DB19C3360F94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESSI_PopUpBase", "..\MESSI_BasePopUp\MESSI_PopUpBase.csproj", "{0F9B0560-F486-4094-9051-CD5BCFA79146}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{45D2E5E8-FCE8-4575-A325-DB19C3360F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45D2E5E8-FCE8-4575-A325-DB19C3360F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45D2E5E8-FCE8-4575-A325-DB19C3360F94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F9B0560-F486-4094-9051-CD5BCFA79146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F9B0560-F486-4094-9051-CD5BCFA79146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F9B0560-F486-4094-9051-CD5BCFA79146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F9B0560-F486-4094-9051-CD5BCFA79146}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

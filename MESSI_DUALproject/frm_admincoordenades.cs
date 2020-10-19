@@ -55,14 +55,15 @@ namespace MESSI_DUAL
             {
                 foreach (String num in num_coord)
                 {
+
                     coordenades.Add(letra + num, numeros_aleatorios.Dequeue().ToString().PadLeft(4, '0'));
                     Label lbl_coord = new Label();
                     tlp_coordenades.Controls.Add(lbl_coord);
                     lbl_coord.Text = coordenades[letra + num];
                     //Console.WriteLine("Coordenada "+letra + num +" - Valor " +coordenades[letra + num]);
+
                 }
             }
-            
         }
 
         private void btn_showcoord_Click(object sender, EventArgs e)

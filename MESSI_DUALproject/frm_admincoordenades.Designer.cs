@@ -128,6 +128,7 @@
             // 
             // tlp_coordenades
             // 
+            this.tlp_coordenades.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tlp_coordenades.ColumnCount = 6;
             this.tlp_coordenades.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlp_coordenades.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));

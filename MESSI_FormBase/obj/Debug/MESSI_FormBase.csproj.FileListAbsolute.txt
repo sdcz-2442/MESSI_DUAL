@@ -7,3 +7,12 @@ C:\Users\saman\Documents\GitHub\MESSI_FormBase\obj\Debug\MESSI_FormBase.csproj.C
 C:\Users\saman\Documents\GitHub\MESSI_FormBase\obj\Debug\MESSI_FormBase.dll
 C:\Users\saman\Documents\GitHub\MESSI_FormBase\obj\Debug\MESSI_FormBase.pdb
 C:\Users\saman\Documents\GitHub\MESSI_FormBase\obj\Debug\MESSI_FormBase.csprojAssemblyReference.cache
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\bin\Debug\MESSI_FormBase.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\bin\Debug\MESSI_FormBase.pdb
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.csprojAssemblyReference.cache
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.frm_base.resources
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.Properties.Resources.resources
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.csproj.GenerateResource.cache
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.csproj.CoreCompileInputs.cache
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.pdb

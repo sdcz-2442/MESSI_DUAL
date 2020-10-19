@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using cs_log;
 
 namespace MESSI_DUAL
 {
@@ -44,7 +43,6 @@ namespace MESSI_DUAL
                     
                 }
 
-                //CODIGO
                 MessageBox.Show("Login details are incorrect");
                 intents++;
 

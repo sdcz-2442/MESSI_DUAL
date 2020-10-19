@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrl_popup_login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrl_popup_login.Designer.cs">
+      <DependentUpon>ctrl_popup_login.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_admincoordenades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     <Compile Include="frm_pantallaprincipal.Designer.cs">
       <DependentUpon>frm_pantallaprincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_popup.Designer.cs">
+      <DependentUpon>frm_popup.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ctrl_popup_login.resx">
+      <DependentUpon>ctrl_popup_login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_admincoordenades.resx">
       <DependentUpon>frm_admincoordenades.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_pantallaprincipal.resx">
       <DependentUpon>frm_pantallaprincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_popup.resx">
+      <DependentUpon>frm_popup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_splash.resx">
       <DependentUpon>frm_splash.cs</DependentUpon>
@@ -146,6 +164,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MESSI_BasePopUp\MESSI_PopUpBase.csproj">
+      <Project>{0f9b0560-f486-4094-9051-cd5bcfa79146}</Project>
+      <Name>MESSI_PopUpBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MESSI_FormBase\MESSI_FormBase.csproj">
       <Project>{45d2e5e8-fce8-4575-a325-db19c3360f94}</Project>
       <Name>MESSI_FormBase</Name>

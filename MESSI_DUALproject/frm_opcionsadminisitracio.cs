@@ -12,6 +12,7 @@ namespace MESSI_DUAL
 {
     public partial class frm_opcionsadminisitracio : MESSI_FormBase.frm_base
     {
+        //codigo
         public frm_opcionsadminisitracio()
         {
             InitializeComponent();

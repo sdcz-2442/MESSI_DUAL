@@ -146,10 +146,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cs_log\cs_log.csproj">
-      <Project>{67da3bbd-79b1-4072-8c21-9f5b8c548bd1}</Project>
-      <Name>cs_log</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MESSI_FormBase\MESSI_FormBase.csproj">
       <Project>{45d2e5e8-fce8-4575-a325-db19c3360f94}</Project>
       <Name>MESSI_FormBase</Name>

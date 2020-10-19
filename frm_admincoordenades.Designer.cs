@@ -145,7 +145,9 @@
             this.tlp_coordenades.Controls.Add(this.label9, 5, 0);
             this.tlp_coordenades.Controls.Add(this.label4, 0, 4);
             this.tlp_coordenades.Controls.Add(this.label10, 0, 0);
-            this.tlp_coordenades.Location = new System.Drawing.Point(25, 14);
+            this.tlp_coordenades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlp_coordenades.Enabled = false;
+            this.tlp_coordenades.Location = new System.Drawing.Point(0, 0);
             this.tlp_coordenades.Name = "tlp_coordenades";
             this.tlp_coordenades.RowCount = 5;
             this.tlp_coordenades.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -153,7 +155,7 @@
             this.tlp_coordenades.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlp_coordenades.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlp_coordenades.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlp_coordenades.Size = new System.Drawing.Size(612, 238);
+            this.tlp_coordenades.Size = new System.Drawing.Size(652, 270);
             this.tlp_coordenades.TabIndex = 0;
             // 
             // label1
@@ -161,7 +163,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans Nova", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.label1.Location = new System.Drawing.Point(3, 47);
+            this.label1.Location = new System.Drawing.Point(3, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 42);
             this.label1.TabIndex = 5;
@@ -172,7 +174,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans Nova", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.label2.Location = new System.Drawing.Point(3, 94);
+            this.label2.Location = new System.Drawing.Point(3, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 42);
             this.label2.TabIndex = 6;
@@ -183,7 +185,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gill Sans Nova", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.label3.Location = new System.Drawing.Point(3, 141);
+            this.label3.Location = new System.Drawing.Point(3, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 42);
             this.label3.TabIndex = 7;
@@ -194,7 +196,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gill Sans Nova", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.label5.Location = new System.Drawing.Point(104, 0);
+            this.label5.Location = new System.Drawing.Point(111, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 42);
             this.label5.TabIndex = 9;
@@ -205,7 +207,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gill Sans Nova", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.label6.Location = new System.Drawing.Point(205, 0);
+            this.label6.Location = new System.Drawing.Point(219, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 42);
             this.label6.TabIndex = 10;
@@ -216,7 +218,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Gill Sans Nova", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.label7.Location = new System.Drawing.Point(306, 0);
+            this.label7.Location = new System.Drawing.Point(327, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 42);
             this.label7.TabIndex = 11;
@@ -227,7 +229,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Gill Sans Nova", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.label8.Location = new System.Drawing.Point(407, 0);
+            this.label8.Location = new System.Drawing.Point(435, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 42);
             this.label8.TabIndex = 12;
@@ -238,7 +240,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Gill Sans Nova", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.label9.Location = new System.Drawing.Point(508, 0);
+            this.label9.Location = new System.Drawing.Point(543, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(36, 42);
             this.label9.TabIndex = 13;
@@ -249,7 +251,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gill Sans Nova", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.label4.Location = new System.Drawing.Point(3, 188);
+            this.label4.Location = new System.Drawing.Point(3, 216);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 42);
             this.label4.TabIndex = 8;

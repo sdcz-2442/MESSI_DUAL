@@ -51,15 +51,28 @@ namespace MESSI_DUAL
 
             }
 
+
+
             foreach (String letra in letras_coord)
             {
                 foreach (String num in num_coord)
                 {
 
                     coordenades.Add(letra + num, numeros_aleatorios.Dequeue().ToString().PadLeft(4, '0'));
-                    Label lbl_coord = new Label();
-                    tlp_coordenades.Controls.Add(lbl_coord);
-                    lbl_coord.Text = coordenades[letra + num];
+                    var label_found = tlp_coordenades.Controls.Find("lbl_" + letra + num, true).FirstOrDefault();
+
+                    if (label_found == null){
+                        Label lbl_coord = new Label();
+                        lbl_coord.Name = "lbl_"+letra+num;
+                        tlp_coordenades.Controls.Add(lbl_coord);
+                        lbl_coord.Text = coordenades[letra + num];
+                    } else
+                    {
+                        label_found.Text = coordenades[letra + num];
+
+                    }
+
+                   
                     //Console.WriteLine("Coordenada "+letra + num +" - Valor " +coordenades[letra + num]);
 
                 }

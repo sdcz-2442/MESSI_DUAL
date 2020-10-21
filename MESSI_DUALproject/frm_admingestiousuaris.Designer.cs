@@ -31,7 +31,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_nom = new System.Windows.Forms.Label();
             this.btn_generarcoord = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_register = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmb_usuari = new System.Windows.Forms.ComboBox();
@@ -83,23 +83,24 @@
             this.btn_generarcoord.Text = "Check";
             this.btn_generarcoord.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_register
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(189, 313);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(125, 36);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            this.btn_register.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            this.btn_register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            this.btn_register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            this.btn_register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_register.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_register.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
+            this.btn_register.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_register.Location = new System.Drawing.Point(189, 313);
+            this.btn_register.Name = "btn_register";
+            this.btn_register.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_register.Size = new System.Drawing.Size(125, 36);
+            this.btn_register.TabIndex = 11;
+            this.btn_register.Text = "Register";
+            this.btn_register.UseVisualStyleBackColor = false;
+            this.btn_register.Click += new System.EventHandler(this.btn_register_Click);
             // 
             // button2
             // 
@@ -215,15 +216,15 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_register);
             this.Controls.Add(this.btn_generarcoord);
             this.Controls.Add(this.panel3);
             this.Name = "frm_admingestiousuaris";
-            this.Text = "frm_admingestiousuaris";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.frm_admingestiousuaris_Load);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.btn_generarcoord, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.btn_register, 0);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
@@ -240,7 +241,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbl_nom;
         private System.Windows.Forms.Button btn_generarcoord;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_register;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;

@@ -29,5 +29,11 @@ namespace MESSI_DUAL
             tbx_mac.Text = macAddr;
             tbx_hostname.Text = System.Environment.MachineName;
         }
+
+        private void btn_register_Click(object sender, EventArgs e)
+        {
+            cls_appconfig.AddUpdateAppSettings("TrustedUser", cmb_usuari.SelectedItem.ToString());
+            MessageBox.Show("Usuari agregat correctament");
+        }
     }
 }

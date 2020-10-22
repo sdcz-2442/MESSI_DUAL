@@ -26,7 +26,16 @@ namespace MESSI_DUAL
                 select nic.GetPhysicalAddress().ToString()
             ).FirstOrDefault();
 
-            tbx_usermac.Text = macAddr;
+            string MACformateada = "";
+            for (int i = 0; i < macAddr.Length; i++)
+            {
+                MACformateada = MACformateada + macAddr.Substring(i, 2) + ":";
+                i++;
+            }
+            MACformateada = MACformateada.Substring(0, MACformateada.Length - 1);
+
+
+            tbx_usermac.Text = MACformateada;
             tbx_userhostname.Text = System.Environment.MachineName;
         }
 

@@ -9,3 +9,14 @@ C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUp
 C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csproj.CopyComplete
 C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.dll
 C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.pdb
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\bin\Debug\MESSI_BasePopUp.dll
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\bin\Debug\MESSI_BasePopUp.pdb
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\bin\Debug\MESSI_FormBase.dll
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\bin\Debug\MESSI_FormBase.pdb
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csprojAssemblyReference.cache
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.frm_basepopup.resources
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csproj.GenerateResource.cache
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csproj.CoreCompileInputs.cache
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csproj.CopyComplete
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.dll
+D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.pdb

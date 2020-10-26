@@ -51,6 +51,7 @@
     <StartupObject>MESSI_DUAL.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -189,6 +190,10 @@
     <ProjectReference Include="..\MESSI_FormBase\MESSI_FormBase.csproj">
       <Project>{45d2e5e8-fce8-4575-a325-db19c3360f94}</Project>
       <Name>MESSI_FormBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MESSI_Libreria\MESSI_Libreria.csproj">
+      <Project>{3c3ef610-816a-4114-b254-68fa0f8ccbc4}</Project>
+      <Name>MESSI_Libreria</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

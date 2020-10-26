@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_base));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.topbar = new System.Windows.Forms.Panel();
             this.btn_closewindow = new System.Windows.Forms.Button();
             this.btn_minimizewindow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panel1
+            // topbar
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 15);
-            this.panel1.TabIndex = 0;
+            this.topbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            this.topbar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topbar.Location = new System.Drawing.Point(0, 0);
+            this.topbar.Name = "topbar";
+            this.topbar.Size = new System.Drawing.Size(800, 15);
+            this.topbar.TabIndex = 0;
             // 
             // btn_closewindow
             // 
@@ -79,7 +79,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_minimizewindow);
             this.Controls.Add(this.btn_closewindow);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.topbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_base";
             this.Text = "frm_base";
@@ -90,7 +90,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel topbar;
         private System.Windows.Forms.Button btn_closewindow;
         private System.Windows.Forms.Button btn_minimizewindow;
     }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace MESSI_DUAL
@@ -63,6 +64,12 @@ namespace MESSI_DUAL
 
                     if (label_found == null){
                         Label lbl_coord = new Label();
+
+
+                        lbl_coord.ForeColor = Color.FromArgb(67, 138, 94);
+                        lbl_coord.Font = new Font("Gill Sans MT", 14, FontStyle.Bold);
+
+
                         lbl_coord.Name = "lbl_"+letra+num;
                         tlp_coordenades.Controls.Add(lbl_coord);
                         lbl_coord.Text = coordenades[letra + num];

@@ -134,7 +134,7 @@
             this.btn_delete.Margin = new System.Windows.Forms.Padding(0);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Padding = new System.Windows.Forms.Padding(1);
-            this.btn_delete.Size = new System.Drawing.Size(94, 39);
+            this.btn_delete.Size = new System.Drawing.Size(93, 39);
             this.btn_delete.TabIndex = 6;
             this.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_delete.UseVisualStyleBackColor = false;

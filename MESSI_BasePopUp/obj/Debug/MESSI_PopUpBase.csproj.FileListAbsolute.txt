@@ -20,3 +20,5 @@ D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csproj.
 D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csproj.CopyComplete
 D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.dll
 D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.pdb
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.btn_keypadcontrol.resources
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.Properties.Resources.resources

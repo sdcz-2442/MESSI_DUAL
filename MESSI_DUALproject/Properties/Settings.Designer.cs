@@ -22,5 +22,16 @@ namespace App.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Securi" +
+            "ty=True")]
+        public string DarkCoreConnectionString {
+            get {
+                return ((string)(this["DarkCoreConnectionString"]));
+            }
+        }
     }
 }

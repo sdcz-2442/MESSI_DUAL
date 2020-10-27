@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MESSI_DUAL
 {
@@ -51,9 +52,25 @@ namespace MESSI_DUAL
                 } 
 
             }
+            //LLENAR LA TABLA DE LA BASE DE DATOS 
+                //Creación de conexión
+            SqlConnection conn;
+            string cnx;
+            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
+            conn = new SqlConnection(cnx);
 
 
 
+            /*
+                //Abrir conexión
+            conn.Open();
+            DataSet dts = new DataSet();
+            adapter.Fill(dts, "AdminCoordinates");
+            conn.Close();
+            */
+            //dts.Tables[0].Clear();
+            //LLENAR TABLELAYOUT CON LABELS CON LAS COORDENADAS
+            //int a = 0;
             foreach (String letra in letras_coord)
             {
                 foreach (String num in num_coord)
@@ -62,6 +79,22 @@ namespace MESSI_DUAL
                     coordenades.Add(letra + num, numeros_aleatorios.Dequeue().ToString().PadLeft(4, '0'));
                     var label_found = tlp_coordenades.Controls.Find("lbl_" + letra + num, true).FirstOrDefault();
 
+                    string query = "INSERT INTO AdminCoordinates(Coordinate, Value) VALUES('" + letra + num + "','" + coordenades[letra + num] + "')";
+                    
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    int registresAfectats = cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                    conn.Close();
+
+                    /*
+                    DataRow workRow = dts.Tables[0].NewRow();
+                    workRow["idCoordinate"] = a;
+                    a++;
+                    workRow["Coordinate"] = letra + num;
+                    workRow["Value"] = coordenades[letra + num];
+                    dts.Tables[0].Rows.Add(workRow);
+                    */
                     if (label_found == null){
                         Label lbl_coord = new Label();
 

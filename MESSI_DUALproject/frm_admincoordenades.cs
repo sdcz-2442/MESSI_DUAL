@@ -56,7 +56,7 @@ namespace MESSI_DUAL
                 //Creación de conexión
             SqlConnection conn;
             string cnx;
-            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
+            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=True";
             conn = new SqlConnection(cnx);
 
 

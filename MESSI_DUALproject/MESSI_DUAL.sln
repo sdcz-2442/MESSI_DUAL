@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESSI_PopUpBase", "..\MESSI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESSI_Libreria", "..\MESSI_Libreria\MESSI_Libreria.csproj", "{3C3EF610-816A-4114-B254-68FA0F8CCBC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESSI_AccesoDatos", "..\MESSI_AccesoDatos\MESSI_AccesoDatos.csproj", "{5B9490B9-BD55-4E90-9BEA-A48E9056A1C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3C3EF610-816A-4114-B254-68FA0F8CCBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C3EF610-816A-4114-B254-68FA0F8CCBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C3EF610-816A-4114-B254-68FA0F8CCBC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B9490B9-BD55-4E90-9BEA-A48E9056A1C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9490B9-BD55-4E90-9BEA-A48E9056A1C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9490B9-BD55-4E90-9BEA-A48E9056A1C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9490B9-BD55-4E90-9BEA-A48E9056A1C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

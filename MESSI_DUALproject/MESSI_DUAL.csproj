@@ -199,6 +199,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MESSI_AccesoDatos\MESSI_AccesoDatos.csproj">
+      <Project>{5b9490b9-bd55-4e90-9bea-a48e9056a1c9}</Project>
+      <Name>MESSI_AccesoDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MESSI_BasePopUp\MESSI_PopUpBase.csproj">
       <Project>{0f9b0560-f486-4094-9051-cd5bcfa79146}</Project>
       <Name>MESSI_PopUpBase</Name>

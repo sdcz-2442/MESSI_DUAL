@@ -53,24 +53,23 @@ namespace MESSI_DUAL
 
             }
             //LLENAR LA TABLA DE LA BASE DE DATOS 
-                //Creación de conexión
+            //Creación de conexión
+
             SqlConnection conn;
             string cnx;
-            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=True";
+            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
             conn = new SqlConnection(cnx);
 
-
-
-            /*
-                //Abrir conexión
-            conn.Open();
             DataSet dts = new DataSet();
-            adapter.Fill(dts, "AdminCoordinates");
+            String query = "DELETE from AdminCoordinates";
+
+            SqlDataAdapter adapter1;
+            adapter1 = new SqlDataAdapter(query, conn);
+
+            conn.Open();
+            adapter1.Fill(dts);
             conn.Close();
-            */
-            //dts.Tables[0].Clear();
-            //LLENAR TABLELAYOUT CON LABELS CON LAS COORDENADAS
-            //int a = 0;
+
             foreach (String letra in letras_coord)
             {
                 foreach (String num in num_coord)
@@ -79,22 +78,16 @@ namespace MESSI_DUAL
                     coordenades.Add(letra + num, numeros_aleatorios.Dequeue().ToString().PadLeft(4, '0'));
                     var label_found = tlp_coordenades.Controls.Find("lbl_" + letra + num, true).FirstOrDefault();
 
-                    string query = "INSERT INTO AdminCoordinates(Coordinate, Value) VALUES('" + letra + num + "','" + coordenades[letra + num] + "')";
-                    
+                    query = "INSERT INTO AdminCoordinates(Coordinate, Value) VALUES('" + letra + num + "','" + coordenades[letra + num] + "')";
+
+                    SqlDataAdapter adapter4;
+                    adapter4 = new SqlDataAdapter(query, conn);
+
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    int registresAfectats = cmd.ExecuteNonQuery();
-                    cmd.Dispose();
+                    adapter4.Fill(dts);
                     conn.Close();
 
-                    /*
-                    DataRow workRow = dts.Tables[0].NewRow();
-                    workRow["idCoordinate"] = a;
-                    a++;
-                    workRow["Coordinate"] = letra + num;
-                    workRow["Value"] = coordenades[letra + num];
-                    dts.Tables[0].Rows.Add(workRow);
-                    */
+
                     if (label_found == null){
                         Label lbl_coord = new Label();
 
@@ -117,6 +110,19 @@ namespace MESSI_DUAL
 
                 }
             }
+
+            SqlDataAdapter adapter2;
+            adapter2 = new SqlDataAdapter(query, conn);
+            SqlCommandBuilder cmdBuilder;
+            cmdBuilder = new SqlCommandBuilder(adapter2);
+            conn.Open();
+
+            if (dts.HasChanges())
+            {
+                int result = adapter2.Update(dts.Tables[0]);
+            }
+
+            conn.Close();
         }
 
         private void btn_showcoord_Click(object sender, EventArgs e)

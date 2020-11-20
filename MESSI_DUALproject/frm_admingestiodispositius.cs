@@ -12,6 +12,7 @@ namespace MESSI_DUAL
 {
     public partial class frm_admingestiodispositius : MESSI_FormBase.frm_base
     {
+
         public frm_admingestiodispositius()
         {
             InitializeComponent();

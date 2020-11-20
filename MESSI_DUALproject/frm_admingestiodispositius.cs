@@ -17,8 +17,9 @@ namespace MESSI_DUAL
             InitializeComponent();
         }
 
-        private void frm_admingestiodispositius_Load(object sender, EventArgs e)
+        public void frm_admingestiodispositius_Load(object sender, EventArgs e)
         {
+            bool existe;
             var macAddr =
             (
                 from nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()
@@ -39,5 +40,29 @@ namespace MESSI_DUAL
             tbx_userhostname.Text = System.Environment.MachineName;
         }
 
+        private void btn_generarcoord_Click(object sender, EventArgs e)
+        {
+
+            if (existe)
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (existe)
+            {
+                tbx_usermac.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+        }
     }
 }

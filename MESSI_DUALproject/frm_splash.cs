@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Collections;
 
 namespace MESSI_DUAL
 {
@@ -16,21 +18,58 @@ namespace MESSI_DUAL
         public frm_splash()
         {
             InitializeComponent();
-/*
-            if (e.Control && e.KeyCode == Keys.N)
-            {
-                tmr_splash.Stop();
-                new frm_validacioadmin().Show();
-                this.Hide();
-            }
-*/
         }
 
         private void frm_splash_Load(object sender, EventArgs e)
         {
             tmr_splash.Start();
             timeLeft = 10;
+            ArrayList myArrayList = new ArrayList();
+            String currentMAC = "";
+            String currentHostName = "";
+            String HostName = System.Environment.MachineName;
 
+            var macAddr =
+                (
+                from nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()
+                where nic.OperationalStatus == System.Net.NetworkInformation.OperationalStatus.Up
+                select nic.GetPhysicalAddress().ToString()
+                ).FirstOrDefault();
+
+            SqlConnection conn;
+            string cnx;
+            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
+            conn = new SqlConnection(cnx);
+
+            DataSet dts = new DataSet();
+            String query = "Select * from TrustedDevices where MAC = '"+macAddr+"' and HostName = '"+HostName+"'";
+
+            SqlDataAdapter adapter1;
+            adapter1 = new SqlDataAdapter(query, conn);
+
+            conn.Open();
+            adapter1.Fill(dts);
+            conn.Close();
+
+            if (dts.Tables[0].Rows.Count == 0)
+            {
+                MessageBox.Show("thou shall not pass");
+            } else
+            {
+                currentMAC = dts.Tables[0].Rows[0]["MAC"].ToString();
+                currentHostName = dts.Tables[0].Rows[0]["HostName"].ToString();
+
+
+                if (currentMAC == macAddr && currentHostName == HostName)
+                {
+                    MessageBox.Show("Adelante adelante");
+                }
+                else
+                {
+                    MessageBox.Show("Thou shall not pass");
+                }
+
+            }
         }
 
         private void tmr_splash_Tick(object sender, EventArgs e)

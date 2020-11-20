@@ -88,7 +88,7 @@ namespace MESSI_DUAL
                     conn.Close();
 
 
-                    if (label_found == null){
+                    if (label_found == null){   
                         Label lbl_coord = new Label();
 
 

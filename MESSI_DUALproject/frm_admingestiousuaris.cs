@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MESSI_DUAL
 {
@@ -44,11 +45,27 @@ namespace MESSI_DUAL
         {
             cls_appconfig.AddUpdateAppSettings("TrustedUser", cmb_usuari.SelectedItem.ToString());
             MessageBox.Show("Usuari agregat correctament");
+            ///
+
+            SqlConnection conn;
+            string cnx;
+            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
+            conn = new SqlConnection(cnx);
         }
 
         public void tbx_mac_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void btn_generarcoord_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

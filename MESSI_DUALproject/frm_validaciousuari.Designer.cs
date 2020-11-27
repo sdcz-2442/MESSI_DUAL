@@ -65,10 +65,9 @@
             this.lbl_login.AutoSize = true;
             this.lbl_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.lbl_login.Location = new System.Drawing.Point(439, 177);
-            this.lbl_login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_login.Location = new System.Drawing.Point(340, 143);
             this.lbl_login.Name = "lbl_login";
-            this.lbl_login.Size = new System.Drawing.Size(134, 52);
+            this.lbl_login.Size = new System.Drawing.Size(106, 39);
             this.lbl_login.TabIndex = 3;
             this.lbl_login.Text = "Login";
             this.lbl_login.Click += new System.EventHandler(this.lbl_login_Click);
@@ -78,10 +77,9 @@
             this.lbl_user.AutoSize = true;
             this.lbl_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.lbl_user.Location = new System.Drawing.Point(391, 255);
-            this.lbl_user.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_user.Location = new System.Drawing.Point(283, 211);
             this.lbl_user.Name = "lbl_user";
-            this.lbl_user.Size = new System.Drawing.Size(76, 31);
+            this.lbl_user.Size = new System.Drawing.Size(61, 25);
             this.lbl_user.TabIndex = 4;
             this.lbl_user.Text = "User";
             // 
@@ -90,27 +88,24 @@
             this.lbl_passcode.AutoSize = true;
             this.lbl_passcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_passcode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.lbl_passcode.Location = new System.Drawing.Point(333, 303);
-            this.lbl_passcode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_passcode.Location = new System.Drawing.Point(230, 249);
             this.lbl_passcode.Name = "lbl_passcode";
-            this.lbl_passcode.Size = new System.Drawing.Size(142, 31);
+            this.lbl_passcode.Size = new System.Drawing.Size(114, 25);
             this.lbl_passcode.TabIndex = 5;
-            this.lbl_passcode.Text = "Passcode";
+            this.lbl_passcode.Text = "Password";
             // 
             // tbx_usuari
             // 
-            this.tbx_usuari.Location = new System.Drawing.Point(479, 266);
-            this.tbx_usuari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbx_usuari.Location = new System.Drawing.Point(359, 216);
             this.tbx_usuari.Name = "tbx_usuari";
-            this.tbx_usuari.Size = new System.Drawing.Size(132, 22);
+            this.tbx_usuari.Size = new System.Drawing.Size(100, 20);
             this.tbx_usuari.TabIndex = 6;
             // 
             // tbx_password
             // 
-            this.tbx_password.Location = new System.Drawing.Point(479, 314);
-            this.tbx_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbx_password.Location = new System.Drawing.Point(359, 255);
             this.tbx_password.Name = "tbx_password";
-            this.tbx_password.Size = new System.Drawing.Size(132, 22);
+            this.tbx_password.Size = new System.Drawing.Size(100, 20);
             this.tbx_password.TabIndex = 7;
             // 
             // btn_validaruser
@@ -119,10 +114,9 @@
             this.btn_validaruser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_validaruser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_validaruser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
-            this.btn_validaruser.Location = new System.Drawing.Point(449, 370);
-            this.btn_validaruser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_validaruser.Location = new System.Drawing.Point(337, 301);
             this.btn_validaruser.Name = "btn_validaruser";
-            this.btn_validaruser.Size = new System.Drawing.Size(163, 46);
+            this.btn_validaruser.Size = new System.Drawing.Size(122, 37);
             this.btn_validaruser.TabIndex = 8;
             this.btn_validaruser.Text = "Enter";
             this.btn_validaruser.UseVisualStyleBackColor = false;
@@ -130,15 +124,15 @@
             // 
             // frm_validaciousuari
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_validaruser);
             this.Controls.Add(this.tbx_password);
             this.Controls.Add(this.tbx_usuari);
             this.Controls.Add(this.lbl_passcode);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.lbl_login);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_validaciousuari";
             this.Load += new System.EventHandler(this.frm_validaciousuari_Load);
             this.Controls.SetChildIndex(this.lbl_login, 0);

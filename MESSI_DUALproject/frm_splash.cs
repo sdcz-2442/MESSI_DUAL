@@ -53,20 +53,21 @@ namespace MESSI_DUAL
 
             if (dts.Tables[0].Rows.Count == 0)
             {
-                MessageBox.Show("thou shall not pass");
+                MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
+                //this.Hide();
             } else
             {
                 currentMAC = dts.Tables[0].Rows[0]["MAC"].ToString();
                 currentHostName = dts.Tables[0].Rows[0]["HostName"].ToString();
 
-
                 if (currentMAC == macAddr && currentHostName == HostName)
                 {
-                    MessageBox.Show("Adelante adelante");
+                    MessageBox.Show("Device Status: OK");
                 }
                 else
                 {
-                    MessageBox.Show("Thou shall not pass");
+                    MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
+                    this.Close();
                 }
 
             }

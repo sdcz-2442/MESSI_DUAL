@@ -139,12 +139,6 @@
             // 
             this.cmb_usuari.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmb_usuari.FormattingEnabled = true;
-            this.cmb_usuari.Items.AddRange(new object[] {
-            "GutiTheBest",
-            "Prova1",
-            "Prova2",
-            "Sam",
-            "Yeyizo"});
             this.cmb_usuari.Location = new System.Drawing.Point(520, 45);
             this.cmb_usuari.Name = "cmb_usuari";
             this.cmb_usuari.Size = new System.Drawing.Size(206, 21);
@@ -222,7 +216,7 @@
             this.Controls.Add(this.btn_register);
             this.Controls.Add(this.btn_generarcoord);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_admingestiousuaris";
             this.Text = "s";
             this.Load += new System.EventHandler(this.frm_admingestiousuaris_Load);

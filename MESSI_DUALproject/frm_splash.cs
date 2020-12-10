@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
+using MESSI_AccesoDatos;
 
 namespace MESSI_DUAL
 {
     public partial class frm_splash : Form
     {
         private int timeLeft;
+        AccesoDatos ad_lib;
+        DataSet dts;
         public frm_splash()
         {
             InitializeComponent();
@@ -36,20 +39,13 @@ namespace MESSI_DUAL
                 select nic.GetPhysicalAddress().ToString()
                 ).FirstOrDefault();
 
-            SqlConnection conn;
-            string cnx;
-            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
-            conn = new SqlConnection(cnx);
+            ad_lib = new AccesoDatos();
 
-            DataSet dts = new DataSet();
+            dts = ad_lib.PortarTaula("TrustedDevices");
+
             String query = "Select * from TrustedDevices where MAC = '"+macAddr+"' and HostName = '"+HostName+"'";
 
-            SqlDataAdapter adapter1;
-            adapter1 = new SqlDataAdapter(query, conn);
-
-            conn.Open();
-            adapter1.Fill(dts);
-            conn.Close();
+            dts = ad_lib.PortarPerConsulta(query, dts, "TrustedDevices");
 
             if (dts.Tables[0].Rows.Count == 0)
             {
@@ -66,7 +62,7 @@ namespace MESSI_DUAL
                 }
                 else
                 {
-                    MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
+                    //MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
                     //this.Close();
                 }
 

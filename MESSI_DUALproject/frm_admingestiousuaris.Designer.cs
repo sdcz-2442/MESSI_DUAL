@@ -28,21 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_nom = new System.Windows.Forms.Label();
             this.btn_generarcoord = new System.Windows.Forms.Button();
             this.btn_register = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.darkCoreDataSet = new App.DarkCoreDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.tbx_hostname = new System.Windows.Forms.TextBox();
             this.tbx_mac = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dk_combobox1 = new MESSI_Libreria.dk_combobox();
+            this.usersTableAdapter = new App.DarkCoreDataSetTableAdapters.UsersTableAdapter();
+            this.cbx_users = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.darkCoreDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -81,9 +87,7 @@
             this.btn_generarcoord.Size = new System.Drawing.Size(125, 36);
             this.btn_generarcoord.TabIndex = 10;
             this.btn_generarcoord.Text = "Check";
-            this.btn_generarcoord.UseVisualStyleBackColor = false;
-            this.btn_generarcoord.Click += new System.EventHandler(this.btn_generarcoord_Click);
-            // 
+            this.btn_generarcoord.UseVisualStyleBackColor = false;            // 
             // btn_register
             // 
             this.btn_register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
@@ -120,11 +124,10 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dk_combobox1);
+            this.panel2.Controls.Add(this.cbx_users);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.tbx_hostname);
             this.panel2.Controls.Add(this.tbx_mac);
@@ -134,6 +137,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(729, 174);
             this.panel2.TabIndex = 13;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.darkCoreDataSet;
+            // 
+            // darkCoreDataSet
+            // 
+            this.darkCoreDataSet.DataSetName = "DarkCoreDataSet";
+            this.darkCoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -163,7 +176,6 @@
             this.tbx_mac.ReadOnly = true;
             this.tbx_mac.Size = new System.Drawing.Size(203, 35);
             this.tbx_mac.TabIndex = 17;
-            this.tbx_mac.TextChanged += new System.EventHandler(this.tbx_mac_TextChanged);
             // 
             // label2
             // 
@@ -196,17 +208,17 @@
             this.panel4.Size = new System.Drawing.Size(800, 17);
             this.panel4.TabIndex = 14;
             // 
-            // dk_combobox1
+            // usersTableAdapter
             // 
-            this.dk_combobox1._Display_Member = "idMessiUser";
-            this.dk_combobox1._ForeignTable = "TrustedDevices";
-            this.dk_combobox1._TableBind = null;
-            this.dk_combobox1._Value_Member = null;
-            this.dk_combobox1.FormattingEnabled = true;
-            this.dk_combobox1.Location = new System.Drawing.Point(521, 45);
-            this.dk_combobox1.Name = "dk_combobox1";
-            this.dk_combobox1.Size = new System.Drawing.Size(190, 21);
-            this.dk_combobox1.TabIndex = 20;
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbx_users
+            // 
+            this.cbx_users.FormattingEnabled = true;
+            this.cbx_users.Location = new System.Drawing.Point(520, 58);
+            this.cbx_users.Name = "cbx_users";
+            this.cbx_users.Size = new System.Drawing.Size(121, 21);
+            this.cbx_users.TabIndex = 20;
             // 
             // frm_admingestiousuaris
             // 
@@ -219,9 +231,10 @@
             this.Controls.Add(this.btn_register);
             this.Controls.Add(this.btn_generarcoord);
             this.Controls.Add(this.panel3);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.usersBindingSource, "descUser", true));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_admingestiousuaris";
-            this.Text = "s";
+            this.Text = "";
             this.Load += new System.EventHandler(this.frm_admingestiousuaris_Load);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.btn_generarcoord, 0);
@@ -233,6 +246,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.darkCoreDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,6 +266,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbx_hostname;
         private System.Windows.Forms.TextBox tbx_mac;
-        private MESSI_Libreria.dk_combobox dk_combobox1;
+        private App.DarkCoreDataSet darkCoreDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private App.DarkCoreDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.ComboBox cbx_users;
     }
 }

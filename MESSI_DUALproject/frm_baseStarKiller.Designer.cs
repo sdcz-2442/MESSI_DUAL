@@ -1,7 +1,7 @@
 ﻿
 namespace App
 {
-    partial class frm_infoSpaceShips
+    partial class frm_baseStarKiller
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace App
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frm_infospaceships";
+            this.Text = "frm_baseStarKiller";
         }
 
         #endregion

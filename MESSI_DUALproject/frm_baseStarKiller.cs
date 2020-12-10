@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class frm_infoSpaceShips : MESSI_FormBase.frm_base
+    public partial class frm_baseStarKiller : Form
     {
-        public frm_infoSpaceShips()
+        public frm_baseStarKiller()
         {
             InitializeComponent();
         }

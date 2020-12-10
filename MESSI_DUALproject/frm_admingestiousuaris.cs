@@ -72,12 +72,11 @@ namespace MESSI_DUAL
 
                 if (currentMAC == macAddr && currentHostName == HostName)
                 {
-                    MessageBox.Show("Device Status: OK");
+                    MessageBox.Show("Device Status: OK");                    
                 }
                 else
                 {
-                    //MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
-                    //this.Close();
+                    MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
                 }
 
             }
@@ -92,14 +91,26 @@ namespace MESSI_DUAL
 
         private void btn_register_Click(object sender, EventArgs e)
         {
-            //cls_appconfig.AddUpdateAppSettings("TrustedUser", cmb_usuari.SelectedItem.ToString());
-            MessageBox.Show("Usuari agregat correctament");
-            ///
+//            només es podrà afegir la vinculació(botó Register).
+//Prement el botó Register, es faran tota una sèrie d’operacions.
+//▪ S’actualitzarà la taula MessiUsers amb el dispositiu i l’usuari seleccionat per al dispositiu actual.
+//▪ S’afegirà el codi de l’usuari en cas que aquest no existeixi a la secció appSettings del fitxer
+//app.config.
+//▪ S’enviarà un mail a l’usuari avisant de la vinculació a l’adreça de mail que està registrada a la taula
+//Users
 
-            SqlConnection conn;
-            string cnx;
-            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
-            conn = new SqlConnection(cnx);
+        }
+
+        private void btn_check_Click(object sender, EventArgs e)
+        {
+//            Quan es seleccioni un usuari i es premi el botó Check, es verificarà si a la taula MessiUsers es vincula aquest
+//dispositiu amb aquest usuari. Si és així s’indicarà de forma clara i
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+//            només es deixarà trencar la vinculació
+//(botó Delete).
         }
     }
 }

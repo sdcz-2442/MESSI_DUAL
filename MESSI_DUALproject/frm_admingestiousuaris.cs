@@ -17,12 +17,9 @@ namespace MESSI_DUAL
         public System.Windows.Forms.DataGridView dtg_BBDDdata;
         public System.Windows.Forms.RichTextBox richtxt_dataset;
 
-        public string nomTaula;
-        public string _nomTaula
-        {
-            get { return nomTaula; }
-            set { nomTaula = value; }
-        }
+        MESSI_AccesoDatos.AccesoDatos ad_lib;
+        DataSet dts;
+        String query;
 
         public frm_admingestiousuaris()
         {
@@ -31,6 +28,8 @@ namespace MESSI_DUAL
 
         public void frm_admingestiousuaris_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'darkCoreDataSet.Users' Puede moverla o quitarla según sea necesario.
+            this.usersTableAdapter.Fill(this.darkCoreDataSet.Users);
             var macAddr =
             (
                 from nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()
@@ -53,25 +52,18 @@ namespace MESSI_DUAL
             String currentHostName = "";
             String HostName = System.Environment.MachineName;
 
-            SqlConnection conn;
-            string cnx;
-            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
-            conn = new SqlConnection(cnx);
+            ad_lib = new AccesoDatos();
 
-            DataSet dts = new DataSet();
-            String query = "Select * from TrustedDevices where MAC = '" + macAddr + "' and HostName = '" + HostName + "'";
+            dts = ad_lib.PortarTaula("TrustedDevices");
 
-            SqlDataAdapter adapter1;
-            adapter1 = new SqlDataAdapter(query, conn);
+            query = "Select * from TrustedDevices where MAC = '" + macAddr + "' and HostName = '" + HostName + "'";
 
-            conn.Open();
-            adapter1.Fill(dts);
-            conn.Close();
+            dts = ad_lib.PortarPerConsulta(query, dts, "TrustedDevices");
 
             if (dts.Tables[0].Rows.Count == 0)
             {
                 MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
-                //this.Close();
+
             }
             else
             {
@@ -84,57 +76,18 @@ namespace MESSI_DUAL
                 }
                 else
                 {
-                    MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
+                    //MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
                     //this.Close();
                 }
 
             }
 
-            if (DesignMode)
-                return;
+            ad_lib.Connectar();
+            dts = ad_lib.PortarTaula("Users");
+            cbx_users.DisplayMember = "CodeUser";
+            cbx_users.ValueMember = "idUser";
+            cbx_users.DataSource = dts.Tables["Users"];
 
-            MESSI_AccesoDatos.AccesoDatos ad_lib;
-            ad_lib = new AccesoDatos();
-
-            //Pasar nom de la taula com parametre al form a l'hora d'afegir els textbox
-            DataSet dtsTabla = ad_lib.PortarTaula(nomTaula);
-            dtg_BBDDdata.DataSource = dtsTabla.Tables[0];
-
-            foreach (Control ctrl in this.Controls)
-            {
-               /* if (ctrl is TextBox)
-                {
-                    TextBox SWctrl = (TextBox)ctrl;
-                    SWctrl.DataBindings.Clear();
-                    SWctrl.DataBindings.Add("Text", dtsTabla.Tables[0], SWctrl._TableBind);
-                    SWctrl.Validated += new System.EventHandler(this.ValidarTextBox);
-
-                }
-                else if (ctrl is ComboBox)
-                {
-                    SWComboFK SWctrl = (SWComboFK)ctrl;
-                    DataSet dtsForeign = new DataSet();
-                    dtsForeign = ad_lib.PortarTaula(SWctrl._ForeignTable);
-
-                    SWctrl.DataBindings.Clear();
-                    SWctrl.DataSource = dtsForeign.Tables[0];
-                    SWctrl.DisplayMember = SWctrl._Display_Member;
-                    SWctrl.ValueMember = SWctrl._Value_Member;
-
-                    SWctrl.DataBindings.Add("SelectedValue", dtsTabla.Tables[0], SWctrl._TableBind);
-                    SWctrl.Validated += new System.EventHandler(this.ValidarComboBox);
-
-                }
-               */
-            }
-        }
-        private void ValidarTextBox(object sender, EventArgs e)
-        {
-            ((TextBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
-        }
-        private void ValidarComboBox(object sender, EventArgs e)
-        {
-            ((ComboBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
 
         private void btn_register_Click(object sender, EventArgs e)
@@ -147,21 +100,6 @@ namespace MESSI_DUAL
             string cnx;
             cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
             conn = new SqlConnection(cnx);
-        }
-
-        public void tbx_mac_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_generarcoord_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

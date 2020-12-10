@@ -56,6 +56,7 @@ namespace MESSI_DUAL
                 } 
 
             }
+
             //LLENAR LA TABLA DE LA BASE DE DATOS 
             //Creación de conexión
 

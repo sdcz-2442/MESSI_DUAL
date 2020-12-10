@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
+using MESSI_AccesoDatos;
 
 namespace MESSI_DUAL
 {
     public partial class frm_admingestiodispositius : MESSI_FormBase.frm_base
     {
         bool existe;
+        MESSI_AccesoDatos.AccesoDatos ad_lib;
+        DataSet dts;
         public frm_admingestiodispositius()
         {
             InitializeComponent();
@@ -54,38 +57,22 @@ namespace MESSI_DUAL
             ).FirstOrDefault();
             String HostName = System.Environment.MachineName;
 
-            SqlConnection conn;
-            string cnx;
-            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
-            conn = new SqlConnection(cnx);
+            ad_lib = new AccesoDatos();
 
-            DataSet dts = new DataSet();
+            dts = ad_lib.PortarTaula("TrustedDevices");
+
             String query = "Select * from TrustedDevices where MAC = '" + macAddr + "'";
 
-            SqlDataAdapter adapter1;
-            adapter1 = new SqlDataAdapter(query, conn);
-
-            conn.Open();
-            adapter1.Fill(dts);
-            conn.Close();
+            dts = ad_lib.PortarPerConsulta(query, dts, "TrustedDevices");
 
             if (dts.Tables[0].Rows.Count == 0)
             {
                 //GUARDA REGISTRO
                 query = "INSERT INTO TrustedDevices(MAC,HostName) VALUES ('" + macAddr + "','" + HostName + "')";
 
-                SqlDataAdapter adapter2;
-                adapter2 = new SqlDataAdapter(query, conn);
+                dts = ad_lib.PortarPerConsulta(query, dts, "TrustedDevices");
 
-                conn.Open();
-                adapter2.Fill(dts);
-
-                if (dts.HasChanges())
-                {
-                    int result = adapter2.Update(dts.Tables[0]);
-                }
-
-                conn.Close();
+                ad_lib.Actualitzar(dts, "TrustedDevices");
 
                 MessageBox.Show("Registro guardado");
 
@@ -106,20 +93,13 @@ namespace MESSI_DUAL
                 select nic.GetPhysicalAddress().ToString()
             ).FirstOrDefault();
 
-            SqlConnection conn;
-            string cnx;
-            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
-            conn = new SqlConnection(cnx);
+            ad_lib = new AccesoDatos();
 
-            DataSet dts = new DataSet();
+            dts = ad_lib.PortarTaula("TrustedDevices");
+
             String query = "Select * from TrustedDevices where MAC = '" + macAddr + "'";
 
-            SqlDataAdapter adapter1;
-            adapter1 = new SqlDataAdapter(query, conn);
-
-            conn.Open();
-            adapter1.Fill(dts);
-            conn.Close();
+            dts = ad_lib.PortarPerConsulta(query, dts, "TrustedDevices");
 
             if (dts.Tables[0].Rows.Count == 0)
             {
@@ -131,18 +111,9 @@ namespace MESSI_DUAL
                 //BORRAR EL REGISTRO DE LA BASE DE DATOS
                 query = "DELETE FROM TrustedDevices where MAC = '" + macAddr + "'";
 
-                SqlDataAdapter adapter2;
-                adapter2 = new SqlDataAdapter(query, conn);
+                dts = ad_lib.PortarPerConsulta(query, dts, "TrustedDevices");
 
-                conn.Open();
-                adapter2.Fill(dts);
-
-                if (dts.HasChanges())
-                {
-                    int result = adapter2.Update(dts.Tables[0]);
-                }
-
-                conn.Close();
+                ad_lib.Actualitzar(dts, "TrustedDevices");
 
                 MessageBox.Show("Registro borrado");
             }

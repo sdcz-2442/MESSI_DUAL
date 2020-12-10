@@ -96,6 +96,12 @@
     <Compile Include="frm_admingestiousuaris.Designer.cs">
       <DependentUpon>frm_admingestiousuaris.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_infospaceships.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_infospaceships.Designer.cs">
+      <DependentUpon>frm_infospaceships.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_opcionsadminisitracio.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -54,7 +54,7 @@ namespace MESSI_DUAL
             if (dts.Tables[0].Rows.Count == 0)
             {
                 MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
-                //this.Hide();
+                //this.Close();
             } else
             {
                 currentMAC = dts.Tables[0].Rows[0]["MAC"].ToString();
@@ -67,7 +67,7 @@ namespace MESSI_DUAL
                 else
                 {
                     MessageBox.Show("Device Status: Device not saved. Please save the device and try again.");
-                    this.Close();
+                    //this.Close();
                 }
 
             }

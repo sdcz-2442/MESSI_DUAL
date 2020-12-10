@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Documents;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MESSI_AccesoDatos;
 
 namespace MESSI_DUAL
 {
     public partial class frm_admincoordenades : MESSI_FormBase.frm_base
     {
+        MESSI_AccesoDatos.AccesoDatos ad_lib;
+        DataSet dts;
+        String query;
         public frm_admincoordenades()
         {
             InitializeComponent();
@@ -55,20 +59,12 @@ namespace MESSI_DUAL
             //LLENAR LA TABLA DE LA BASE DE DATOS 
             //Creación de conexión
 
-            SqlConnection conn;
-            string cnx;
-            cnx = "Data Source=LAPTOP-45H9O8I4\\SQLEXPRESS;Initial Catalog=DarkCore;Integrated Security=True";
-            conn = new SqlConnection(cnx);
+            ad_lib = new AccesoDatos();
 
-            DataSet dts = new DataSet();
-            String query = "DELETE from AdminCoordinates";
+            dts = ad_lib.PortarTaula("AdminCoordinates");
 
-            SqlDataAdapter adapter1;
-            adapter1 = new SqlDataAdapter(query, conn);
-
-            conn.Open();
-            adapter1.Fill(dts);
-            conn.Close();
+            query = "DELETE FROM AdminCoordinates";
+            dts = ad_lib.PortarPerConsulta(query,dts,"AdminCoordinates");
 
             foreach (String letra in letras_coord)
             {
@@ -80,13 +76,7 @@ namespace MESSI_DUAL
 
                     query = "INSERT INTO AdminCoordinates(Coordinate, Value) VALUES('" + letra + num + "','" + coordenades[letra + num] + "')";
 
-                    SqlDataAdapter adapter4;
-                    adapter4 = new SqlDataAdapter(query, conn);
-
-                    conn.Open();
-                    adapter4.Fill(dts);
-                    conn.Close();
-
+                    dts = ad_lib.PortarPerConsulta(query, dts, "AdminCoordinates");
 
                     if (label_found == null){   
                         Label lbl_coord = new Label();
@@ -105,24 +95,11 @@ namespace MESSI_DUAL
 
                     }
 
-                   
-                    //Console.WriteLine("Coordenada "+letra + num +" - Valor " +coordenades[letra + num]);
-
                 }
             }
 
-            SqlDataAdapter adapter2;
-            adapter2 = new SqlDataAdapter(query, conn);
-            SqlCommandBuilder cmdBuilder;
-            cmdBuilder = new SqlCommandBuilder(adapter2);
-            conn.Open();
+            ad_lib.Actualitzar(dts, "AdminCoordinates");
 
-            if (dts.HasChanges())
-            {
-                int result = adapter2.Update(dts.Tables[0]);
-            }
-
-            conn.Close();
         }
 
         private void btn_showcoord_Click(object sender, EventArgs e)

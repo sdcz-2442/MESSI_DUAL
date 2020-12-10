@@ -34,13 +34,13 @@
             this.btn_register = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cmb_usuari = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbx_hostname = new System.Windows.Forms.TextBox();
             this.tbx_mac = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dk_combobox1 = new MESSI_Libreria.dk_combobox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -124,7 +124,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cmb_usuari);
+            this.panel2.Controls.Add(this.dk_combobox1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.tbx_hostname);
             this.panel2.Controls.Add(this.tbx_mac);
@@ -134,15 +134,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(729, 174);
             this.panel2.TabIndex = 13;
-            // 
-            // cmb_usuari
-            // 
-            this.cmb_usuari.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cmb_usuari.FormattingEnabled = true;
-            this.cmb_usuari.Location = new System.Drawing.Point(520, 45);
-            this.cmb_usuari.Name = "cmb_usuari";
-            this.cmb_usuari.Size = new System.Drawing.Size(206, 21);
-            this.cmb_usuari.TabIndex = 20;
             // 
             // label3
             // 
@@ -205,6 +196,18 @@
             this.panel4.Size = new System.Drawing.Size(800, 17);
             this.panel4.TabIndex = 14;
             // 
+            // dk_combobox1
+            // 
+            this.dk_combobox1._Display_Member = "idMessiUser";
+            this.dk_combobox1._ForeignTable = "TrustedDevices";
+            this.dk_combobox1._TableBind = null;
+            this.dk_combobox1._Value_Member = null;
+            this.dk_combobox1.FormattingEnabled = true;
+            this.dk_combobox1.Location = new System.Drawing.Point(521, 45);
+            this.dk_combobox1.Name = "dk_combobox1";
+            this.dk_combobox1.Size = new System.Drawing.Size(190, 21);
+            this.dk_combobox1.TabIndex = 20;
+            // 
             // frm_admingestiousuaris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,9 +248,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox cmb_usuari;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbx_hostname;
         private System.Windows.Forms.TextBox tbx_mac;
+        private MESSI_Libreria.dk_combobox dk_combobox1;
     }
 }

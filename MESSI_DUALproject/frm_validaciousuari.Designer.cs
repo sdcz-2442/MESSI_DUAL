@@ -33,9 +33,9 @@
             this.lbl_login = new System.Windows.Forms.Label();
             this.lbl_user = new System.Windows.Forms.Label();
             this.lbl_passcode = new System.Windows.Forms.Label();
-            this.tbx_usuari = new System.Windows.Forms.TextBox();
             this.tbx_password = new System.Windows.Forms.TextBox();
             this.btn_validaruser = new System.Windows.Forms.Button();
+            this.tbx_usuari = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -94,13 +94,6 @@
             this.lbl_passcode.TabIndex = 5;
             this.lbl_passcode.Text = "Password";
             // 
-            // tbx_usuari
-            // 
-            this.tbx_usuari.Location = new System.Drawing.Point(359, 216);
-            this.tbx_usuari.Name = "tbx_usuari";
-            this.tbx_usuari.Size = new System.Drawing.Size(100, 20);
-            this.tbx_usuari.TabIndex = 6;
-            // 
             // tbx_password
             // 
             this.tbx_password.Location = new System.Drawing.Point(359, 255);
@@ -122,25 +115,32 @@
             this.btn_validaruser.UseVisualStyleBackColor = false;
             this.btn_validaruser.Click += new System.EventHandler(this.btn_validaruser_Click);
             // 
+            // tbx_usuari
+            // 
+            this.tbx_usuari.Location = new System.Drawing.Point(359, 211);
+            this.tbx_usuari.Name = "tbx_usuari";
+            this.tbx_usuari.Size = new System.Drawing.Size(100, 20);
+            this.tbx_usuari.TabIndex = 9;
+            // 
             // frm_validaciousuari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbx_usuari);
             this.Controls.Add(this.btn_validaruser);
             this.Controls.Add(this.tbx_password);
-            this.Controls.Add(this.tbx_usuari);
             this.Controls.Add(this.lbl_passcode);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.lbl_login);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_validaciousuari";
             this.Load += new System.EventHandler(this.frm_validaciousuari_Load);
             this.Controls.SetChildIndex(this.lbl_login, 0);
             this.Controls.SetChildIndex(this.lbl_user, 0);
             this.Controls.SetChildIndex(this.lbl_passcode, 0);
-            this.Controls.SetChildIndex(this.tbx_usuari, 0);
             this.Controls.SetChildIndex(this.tbx_password, 0);
             this.Controls.SetChildIndex(this.btn_validaruser, 0);
+            this.Controls.SetChildIndex(this.tbx_usuari, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,8 +153,8 @@
         private System.Windows.Forms.Label lbl_login;
         private System.Windows.Forms.Label lbl_user;
         private System.Windows.Forms.Label lbl_passcode;
-        private System.Windows.Forms.TextBox tbx_usuari;
         private System.Windows.Forms.TextBox tbx_password;
         private System.Windows.Forms.Button btn_validaruser;
+        private System.Windows.Forms.TextBox tbx_usuari;
     }
 }

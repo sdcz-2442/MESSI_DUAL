@@ -24,4 +24,3 @@ C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBa
 C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.csproj.CoreCompileInputs.cache
 C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.dll
 C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.pdb
-C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_FormBase\obj\Debug\MESSI_FormBase.csprojAssemblyReference.cache

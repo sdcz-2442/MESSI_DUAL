@@ -49,6 +49,12 @@
     <Compile Include="dk_combobox.Designer.cs">
       <DependentUpon>dk_combobox.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuCustom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuCustom.Designer.cs">
+      <DependentUpon>MenuCustom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

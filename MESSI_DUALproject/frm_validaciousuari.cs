@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
+using MESSI_AccesoDatos;
 
 namespace MESSI_DUAL
 {
     public partial class frm_validaciousuari : MESSI_FormBase.frm_base
     {
+        MESSI_AccesoDatos.AccesoDatos ad_lib;
+        DataSet dts;
+        String query;
+
         public frm_validaciousuari()
         {
             InitializeComponent();
@@ -26,15 +32,27 @@ namespace MESSI_DUAL
         int intents = 0;
         private void btn_validaruser_Click(object sender, EventArgs e)
         {
-            String usuari = "PROVA";
-            String pass = "12345";
-            //cuo
+            String user;
+            String pass;
+            String codeUser;
+            String realpass;
 
-            bool valid = (tbx_usuari.Text == usuari && tbx_password.Text == pass);
+            ad_lib = new AccesoDatos();
+
+            dts = ad_lib.PortarTaula("Users");
+            query = "Select * from Users where codeUser = '" + tbx_usuari.Text + "'";
+            if (dts.Tables[0].Rows.Count == 0)
+            {
+                return;
+            }
+            codeUser = dts.Tables[0].Rows[0]["codeUser"].ToString();
+            realpass = dts.Tables[0].Rows[0]["password"].ToString();
+
+            bool valid = (tbx_usuari.Text == codeUser && tbx_password.Text == realpass);
 
             if (!valid)
             {
-                String path = @"C:\Users\Portatil Yeyizo\Desktop\log_error.txt";
+                String path = @"C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_DUALproject\logs\log_error.txt";
 
                 using (StreamWriter mylogs = File.AppendText(path))
                 {
@@ -56,6 +74,7 @@ namespace MESSI_DUAL
 
                 if (intents == 3)
                 {
+                    MessageBox.Show("Número de intentos fallidos: "+intents+". Cerrando aplicación");
                     this.Close();
                 }
 
@@ -71,6 +90,13 @@ namespace MESSI_DUAL
 
         private void lbl_login_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void tbx_password_TextChanged(object sender, EventArgs e)
+        {
+            tbx_password.PasswordChar = '*';
+
 
         }
     }

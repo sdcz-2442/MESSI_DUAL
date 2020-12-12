@@ -8,13 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace App
+namespace MESSI_Libreria
 {
-    public partial class frm_infoSpaceShips : Form
+    public partial class MenuCustom : UserControl
     {
-        public frm_infoSpaceShips()
+        public MenuCustom()
         {
             InitializeComponent();
+        }
+
+        public void LoadMenu()
+        {
         }
     }
 }

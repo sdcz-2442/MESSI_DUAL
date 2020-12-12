@@ -158,6 +158,12 @@
     <EmbeddedResource Include="frm_admingestiousuaris.resx">
       <DependentUpon>frm_admingestiousuaris.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_baseStarKiller.resx">
+      <DependentUpon>frm_baseStarKiller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_infoSpaceShips.resx">
+      <DependentUpon>frm_infoSpaceShips.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_opcionsadminisitracio.resx">
       <DependentUpon>frm_opcionsadminisitracio.cs</DependentUpon>
     </EmbeddedResource>

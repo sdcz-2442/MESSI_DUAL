@@ -100,6 +100,7 @@
             this.tbx_password.Name = "tbx_password";
             this.tbx_password.Size = new System.Drawing.Size(100, 20);
             this.tbx_password.TabIndex = 7;
+            this.tbx_password.TextChanged += new System.EventHandler(this.tbx_password_TextChanged);
             // 
             // btn_validaruser
             // 

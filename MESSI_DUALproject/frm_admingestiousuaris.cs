@@ -14,9 +14,6 @@ namespace MESSI_DUAL
 {
     public partial class frm_admingestiousuaris : MESSI_FormBase.frm_base
     {
-        public System.Windows.Forms.DataGridView dtg_BBDDdata;
-        public System.Windows.Forms.RichTextBox richtxt_dataset;
-
         MESSI_AccesoDatos.AccesoDatos ad_lib;
         DataSet dts;
         String query;
@@ -235,6 +232,8 @@ namespace MESSI_DUAL
                 dts = ad_lib.PortarPerConsulta(query, dts, "MessiUsers");
 
                 ad_lib.Actualitzar(dts, "MessiUsers");
+
+                cbx_users.Text = "";
 
                 MessageBox.Show("Usuario borrado");
             }

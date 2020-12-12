@@ -118,5 +118,10 @@ namespace MESSI_DUAL
                 MessageBox.Show("Registro borrado");
             }
         }
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frm_opcionsadminisitracio().Show();
+        }
     }
 }

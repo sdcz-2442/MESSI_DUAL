@@ -107,5 +107,11 @@ namespace MESSI_DUAL
         {
             pnl_coordenades.Show();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frm_opcionsadminisitracio().Show();
+        }
     }
 }

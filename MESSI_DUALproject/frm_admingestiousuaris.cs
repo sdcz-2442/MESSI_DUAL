@@ -21,6 +21,10 @@ namespace MESSI_DUAL
         DataSet dts;
         String query;
 
+        String idDevice;
+        String idUser;
+        String idDeviceMESSI;
+
         public frm_admingestiousuaris()
         {
             InitializeComponent();
@@ -91,26 +95,154 @@ namespace MESSI_DUAL
 
         private void btn_register_Click(object sender, EventArgs e)
         {
-//            només es podrà afegir la vinculació(botó Register).
-//Prement el botó Register, es faran tota una sèrie d’operacions.
-//▪ S’actualitzarà la taula MessiUsers amb el dispositiu i l’usuari seleccionat per al dispositiu actual.
-//▪ S’afegirà el codi de l’usuari en cas que aquest no existeixi a la secció appSettings del fitxer
-//app.config.
-//▪ S’enviarà un mail a l’usuari avisant de la vinculació a l’adreça de mail que està registrada a la taula
-//Users
+            //query pillando el idDevice de TrustedDevices 
+            //query pillando el idUser de Users del combobox seleccionado
+            //insert de idDevice y de idUser
+
+            var macAddr =
+            (
+                from nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()
+                where nic.OperationalStatus == System.Net.NetworkInformation.OperationalStatus.Up
+                select nic.GetPhysicalAddress().ToString()
+            ).FirstOrDefault();
+            String HostName = System.Environment.MachineName;
+
+            ad_lib = new AccesoDatos();
+
+            dts = ad_lib.PortarTaula("TrustedDevices");
+            query = "Select * from TrustedDevices where MAC = '" + macAddr + "' and HostName = '" + HostName + "'";
+            idDevice = dts.Tables[0].Rows[0]["idDevice"].ToString();
+
+            ad_lib = new AccesoDatos();
+
+            dts = ad_lib.PortarTaula("Users");
+            query = "Select * from Users where codeUser = '" + cbx_users.Text + "'";
+
+            if (dts.Tables[0].Rows.Count == 0)
+            {
+                MessageBox.Show("No hay usuarios seleccionados");
+                return;
+            }
+
+            idUser = dts.Tables[0].Rows[0]["idUser"].ToString();
+   
+            ad_lib = new AccesoDatos();
+
+            dts = ad_lib.PortarTaula("MessiUsers");
+            query = "Select * from MessiUsers where idDevice = '" + idDevice + "'";
+            //idDeviceMESSI = dts.Tables[0].Rows[0]["idDevice"].ToString();
+
+            if (dts.Tables[0].Rows.Count == 0)
+            {
+                query = "INSERT INTO MessiUsers(idDevice, idUser) VALUES('" + idDevice + "','" + idUser + "')";
+
+                dts = ad_lib.PortarPerConsulta(query, dts, "MessiUsers");
+
+                ad_lib.Actualitzar(dts, "MessiUsers");
+
+                MessageBox.Show("Usuario registrado");
+            }
+            else
+            {
+                MessageBox.Show("Usuario ya existe");
+            }
 
         }
 
         private void btn_check_Click(object sender, EventArgs e)
         {
-//            Quan es seleccioni un usuari i es premi el botó Check, es verificarà si a la taula MessiUsers es vincula aquest
-//dispositiu amb aquest usuari. Si és així s’indicarà de forma clara i
+            //MIRAR SI MAC EN TRUSTEDDEVICES ES LA MISMA
+            // si la mac es correcta, pillar idDevice
+
+            var macAddr =
+            (
+                from nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()
+                where nic.OperationalStatus == System.Net.NetworkInformation.OperationalStatus.Up
+                select nic.GetPhysicalAddress().ToString()
+            ).FirstOrDefault();
+            String HostName = System.Environment.MachineName;
+
+            ad_lib = new AccesoDatos();
+
+            dts = ad_lib.PortarTaula("TrustedDevices");
+            query = "Select * from TrustedDevices where MAC = '" + macAddr + "' and HostName = '" + HostName + "'";
+            idDevice = dts.Tables[0].Rows[0]["idDevice"].ToString();
+
+            //MIRAR USER SELECCIONADO EN TBX
+            //pillar idUser de Users
+
+            ad_lib = new AccesoDatos();
+
+            dts = ad_lib.PortarTaula("Users");
+            query = "Select * from Users where codeUser = '" + cbx_users.Text + "'";
+
+            if (dts.Tables[0].Rows.Count == 0)
+            {
+                MessageBox.Show("No hay usuarios seleccionados");
+                return;
+            }
+
+            idUser = dts.Tables[0].Rows[0]["idUser"].ToString();
+
+            //MIRAR SI MAC Y USER ESTAN EN MESSI USERS
+            //mirar si idDevice y idUsers están en el mismo registro y mostrar que sí o que no
+
+            ad_lib = new AccesoDatos();
+
+            dts = ad_lib.PortarTaula("MessiUsers");
+            query = "Select * from MessiUsers where idDevice = '" + idDevice + "'" + "and idUsers =" + idUser + "'";
+
+            if (dts.Tables[0].Rows.Count == 0)
+            {
+
+                MessageBox.Show("Usuario no existe");
+            }
+            else
+            {
+                MessageBox.Show("Usuario existe");
+            }
         }
+        
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-//            només es deixarà trencar la vinculació
-//(botó Delete).
+            ad_lib = new AccesoDatos();
+
+            dts = ad_lib.PortarTaula("Users");
+            query = "Select * from Users where codeUser = '" + cbx_users.Text + "'";
+
+            if (dts.Tables[0].Rows.Count == 0)
+            {
+                MessageBox.Show("No hay usuarios seleccionados");
+                return;
+            }
+
+            idUser = dts.Tables[0].Rows[0]["idUser"].ToString();
+
+            ad_lib = new AccesoDatos();
+
+            dts = ad_lib.PortarTaula("MessiUsers");
+            query = "Select * from MessiUsers where idUser = '" + idUser + "'";
+
+            if (dts.Tables[0].Rows.Count == 0)
+            {
+                MessageBox.Show("Usuario no existe");
+            }
+            else
+            {
+                query = "DELETE FROM MessiUsers WHERE idUser = " + idUser + "";
+
+                dts = ad_lib.PortarPerConsulta(query, dts, "MessiUsers");
+
+                ad_lib.Actualitzar(dts, "MessiUsers");
+
+                MessageBox.Show("Usuario borrado");
+            }
+        }
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frm_opcionsadminisitracio().Show();
         }
     }
 }

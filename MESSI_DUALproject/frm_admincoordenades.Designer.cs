@@ -32,6 +32,7 @@
             this.lbl_nom = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_back = new System.Windows.Forms.Button();
             this.btn_generarcoord = new System.Windows.Forms.Button();
             this.btn_showcoord = new System.Windows.Forms.Button();
             this.pnl_coordenades = new System.Windows.Forms.Panel();
@@ -46,7 +47,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.btn_back = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.pnl_coordenades.SuspendLayout();
             this.tlp_coordenades.SuspendLayout();
@@ -81,6 +81,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(343, 55);
             this.panel3.TabIndex = 7;
+            // 
+            // btn_back
+            // 
+            this.btn_back.FlatAppearance.BorderSize = 0;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
+            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
+            this.btn_back.Location = new System.Drawing.Point(0, 11);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(30, 27);
+            this.btn_back.TabIndex = 16;
+            this.btn_back.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_generarcoord
             // 
@@ -272,21 +287,6 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "    ";
             // 
-            // btn_back
-            // 
-            this.btn_back.FlatAppearance.BorderSize = 0;
-            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
-            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
-            this.btn_back.Location = new System.Drawing.Point(0, 11);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(30, 27);
-            this.btn_back.TabIndex = 16;
-            this.btn_back.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
-            // 
             // frm_admincoordenades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,7 +297,7 @@
             this.Controls.Add(this.btn_generarcoord);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_admincoordenades";
             this.Text = "frm_admincoordenades";
             this.Load += new System.EventHandler(this.frm_admincoordenades_Load);

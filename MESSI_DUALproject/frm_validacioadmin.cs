@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MESSI_DUAL
 {
@@ -62,6 +63,15 @@ namespace MESSI_DUAL
                 }
 
             }
+            char lletra;
+            string numero;
+
+            lletra = (char)rnd.Next(65,69);
+            numero = rnd.Next(1,6).ToString();
+
+            string coordenada = lletra + numero;
+
+            lbl_coordenada.Text = coordenada;
         }
 
         void button_click(object sender, EventArgs e)
@@ -81,18 +91,57 @@ namespace MESSI_DUAL
         private void btn_validar_Click(object sender, EventArgs e)
         {
             int coordinates = 1234;
-            bool valid = (coordinates == 1234);
+            bool valid = false;
+            String coord;
+            String value;
 
-            if (int.Parse(tbx_validacioadmin.Text) != coordinates)
+            SqlConnection conn;
+            string cnx;
+
+            cnx = "Data Source = LAPTOP-45H9O8I4\\SQLEXPRESS; Initial Catalog = DarkCore; Integrated Security = True";
+            conn = new SqlConnection(cnx);
+
+            SqlDataAdapter adapter;
+            string query;
+            query = "select * from AdminCoordinates WHERE Coordinate = '"+lbl_coordenada.Text+"'";
+            adapter = new SqlDataAdapter(query, conn);
+
+            conn.Open();
+
+            DataSet dts = new DataSet();
+            adapter.Fill(dts, "AdminCoordinates");
+
+            conn.Close();
+
+            coord = dts.Tables[0].Rows[0]["Coordinate"].ToString();
+            value = dts.Tables[0].Rows[0]["Value"].ToString();
+
+            valid = tbx_validacioadmin.Text == value;
+
+            if (valid)
+            {
+                this.Hide();
+                new frm_opcionsadminisitracio().Show();
+            } else
             {
                 System.Windows.MessageBox.Show("Login details are incorrect");
                 tbx_validacioadmin.Clear();
             }
-            else
-            {
-                this.Hide();
-                new frm_opcionsadminisitracio().Show();
-            }
+
+
+            //if (int.Parse(tbx_validacioadmin.Text) != coordinates)
+            //{
+            //    System.Windows.MessageBox.Show("Login details are incorrect");
+            //    tbx_validacioadmin.Clear();
+            //}
+            //else
+            //{
+            //    this.Hide();
+            //    new frm_opcionsadminisitracio().Show();
+            //}
+
+            //////////////////////////
+            ///
         }
     }
 }

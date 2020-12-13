@@ -203,6 +203,11 @@
     <None Include="DarkCoreDataSet.xss">
       <DependentUpon>DarkCoreDataSet.xsd</DependentUpon>
     </None>
+    <None Include="images\Shuttle\Shuttle.pdf" />
+    <None Include="images\Tie-Advanced\TieAdvanced.pdf" />
+    <None Include="images\Tie-Bomber\TieBomber.pdf" />
+    <None Include="images\Tie-Fighter\TieFigther.pdf" />
+    <None Include="images\Tie-Interceptor\TieInterceptor.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -245,6 +250,115 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\406-4066524_stormtrooper-galactic-empire-star-wars-l-galactic-empire.png" />
+    <Content Include="images\back.png" />
+    <Content Include="images\back1.png" />
+    <Content Include="images\close_icon.png" />
+    <Content Include="images\iconShips\Shuttle.png" />
+    <Content Include="images\iconShips\TieAdvanced.png" />
+    <Content Include="images\iconShips\TieBomber.png" />
+    <Content Include="images\iconShips\TieFighter.png" />
+    <Content Include="images\iconShips\TieInterceptor.png" />
+    <Content Include="images\icons\back.png" />
+    <Content Include="images\icons\blankgear-blue.png" />
+    <Content Include="images\icons\cloud-blie.png" />
+    <Content Include="images\icons\cloud-green.png" />
+    <Content Include="images\icons\cloud.png" />
+    <Content Include="images\icons\cloud_opcion.png" />
+    <Content Include="images\icons\clud.png" />
+    <Content Include="images\icons\conexion-green.png" />
+    <Content Include="images\icons\conexionblue.png" />
+    <Content Include="images\icons\controlpanel-blue.png" />
+    <Content Include="images\icons\controlpanel-green.png" />
+    <Content Include="images\icons\coordenades.png" />
+    <Content Include="images\icons\file-icon-blue.png" />
+    <Content Include="images\icons\file-icon-green.png" />
+    <Content Include="images\icons\file-icon.png" />
+    <Content Include="images\icons\fileicon.png" />
+    <Content Include="images\icons\gear.png" />
+    <Content Include="images\icons\gearsettings-blue.png" />
+    <Content Include="images\icons\gestiocoordenades.png" />
+    <Content Include="images\icons\gestiodispositius.png" />
+    <Content Include="images\icons\gestions1.png" />
+    <Content Include="images\icons\iconmonstr-chart-4-240 %281%29.png" />
+    <Content Include="images\icons\iconmonstr-chart-4-240.png" />
+    <Content Include="images\icons\iconmonstr-friend-1-240 %281%29.png" />
+    <Content Include="images\icons\iconmonstr-friend-1-240.png" />
+    <Content Include="images\icons\iconmonstr-gear-2-240.png" />
+    <Content Include="images\icons\iconmonstr-hashtag-1-240.png" />
+    <Content Include="images\icons\iconmonstr-minus-2-240.png" />
+    <Content Include="images\icons\iconmonstr-power-on-off-8-240 %281%29.png" />
+    <Content Include="images\icons\iconmonstr-power-on-off-8-240 %282%29.png" />
+    <Content Include="images\icons\iconmonstr-power-on-off-8-240 %283%29.png" />
+    <Content Include="images\icons\iconmonstr-power-on-off-8-240.png" />
+    <Content Include="images\icons\iconmonstr-x-mark-12-240.png" />
+    <Content Include="images\icons\iconmsettingsgear.png" />
+    <Content Include="images\icons\logo petit.png" />
+    <Content Include="images\icons\minus.png" />
+    <Content Include="images\icons\pop - copia.png" />
+    <Content Include="images\icons\pop.png" />
+    <Content Include="images\icons\pop1.png" />
+    <Content Include="images\icons\red.png" />
+    <Content Include="images\icons\SHARP.png" />
+    <Content Include="images\icons\users.png" />
+    <Content Include="images\icons\usuari.png" />
+    <Content Include="images\icons\Webp.net-resizeimage %281%29.png" />
+    <Content Include="images\icons\Webp.net-resizeimage %282%29.png" />
+    <Content Include="images\icons\Webp.net-resizeimage %283%29.png" />
+    <Content Include="images\icons\Webp.net-resizeimage %284%29.png" />
+    <Content Include="images\icons\Webp.net-resizeimage %285%29.png" />
+    <Content Include="images\icons\Webp.net-resizeimage.png" />
+    <Content Include="images\icons\xmark-black.png" />
+    <Content Include="images\icons\xmark-blue.png" />
+    <Content Include="images\icons\xmark.png" />
+    <Content Include="images\Info.xml" />
+    <Content Include="images\logo_azul.png" />
+    <Content Include="images\logo_blanco.png" />
+    <Content Include="images\logo_verde.png" />
+    <Content Include="images\logo_verdeoscuro.png" />
+    <Content Include="images\pokemon-go-logo-vector-png-transparent-pokemon-go-logo-vector-179195 %281%29.png" />
+    <Content Include="images\pop.png" />
+    <Content Include="images\Shuttle\blueprint.jpg" />
+    <Content Include="images\Shuttle\front.png" />
+    <Content Include="images\Shuttle\ImperialShuttle.mp4" />
+    <Content Include="images\Shuttle\rear.png" />
+    <Content Include="images\Shuttle\side.png" />
+    <Content Include="images\Shuttle\top.png" />
+    <Content Include="images\Shuttle\VideoShuttle.png" />
+    <Content Include="images\StarKiller\detall.png" />
+    <Content Include="images\StarKiller\detall3.png" />
+    <Content Include="images\StarKiller\DS3D.png" />
+    <Content Include="images\StarKiller\DSPlan.png" />
+    <Content Include="images\Tie-Advanced\TieAdvadced.png" />
+    <Content Include="images\Tie-Advanced\TieAdvanced.mp4" />
+    <Content Include="images\Tie-Advanced\TieAdvanced.png" />
+    <Content Include="images\Tie-Advanced\TieAdvancedDalt.png" />
+    <Content Include="images\Tie-Advanced\TieAdvancedDavant.png" />
+    <Content Include="images\Tie-Advanced\TieAdvancedLateral.png" />
+    <Content Include="images\Tie-Advanced\VideoAdvanced.png" />
+    <Content Include="images\Tie-Bomber\tiebomber.jpg" />
+    <Content Include="images\Tie-Bomber\TieBomber.mp4" />
+    <Content Include="images\Tie-Bomber\TieBomber.png" />
+    <Content Include="images\Tie-Bomber\TieBomberDalt.png" />
+    <Content Include="images\Tie-Bomber\TieBomberDavant.png" />
+    <Content Include="images\Tie-Bomber\TieBomberLateral.png" />
+    <Content Include="images\Tie-Bomber\VideoBomber.png" />
+    <Content Include="images\Tie-Fighter\tie.jpg" />
+    <Content Include="images\Tie-Fighter\TieFigther.mp4" />
+    <Content Include="images\Tie-Fighter\TieFigther.png" />
+    <Content Include="images\Tie-Fighter\TieFigtherDalt.png" />
+    <Content Include="images\Tie-Fighter\TieFigtherDavant.png" />
+    <Content Include="images\Tie-Fighter\TieFigtherLateral.png" />
+    <Content Include="images\Tie-Fighter\VideoTieFigther.png" />
+    <Content Include="images\Tie-Interceptor\TieInterceptor.jpg" />
+    <Content Include="images\Tie-Interceptor\TieInterceptor.mp4" />
+    <Content Include="images\Tie-Interceptor\TieInterceptor.png" />
+    <Content Include="images\Tie-Interceptor\TieInterceptorDalt.png" />
+    <Content Include="images\Tie-Interceptor\TieInterceptorDavant.png" />
+    <Content Include="images\Tie-Interceptor\TieInterceptorLateral.png" />
+    <Content Include="images\Tie-Interceptor\VideoInterceptor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

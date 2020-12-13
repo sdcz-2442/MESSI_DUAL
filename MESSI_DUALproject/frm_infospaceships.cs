@@ -17,6 +17,8 @@ namespace App
     {
         string xmlPath = "..\\images\\Info.xml";
         Dictionary<String, String> Dict_SpaceShips;
+        List<XElement> result;
+        string spaceShipKey = "";
 
         public frm_infoSpaceShips()
         {
@@ -29,6 +31,13 @@ namespace App
             settings.IgnoreWhitespace = true;
             XmlReader reader = XmlReader.Create(xmlPath, settings);
             lstNodes.Items.Clear();
+
+            label4.Visible = false;
+            lbl_spaceshipname.Visible = false;
+            pbx_blueprint.Visible = false;
+            tableLayoutPanel2.Visible = false;
+            rtbx_description.Visible = false;
+            //axWindowsMediaPlayer1.Visible = false;
 
             if (reader.ReadToFollowing("TechnicalInfo"))
             {
@@ -51,8 +60,14 @@ namespace App
             settings.IgnoreWhitespace = true;
             XmlReader reader = XmlReader.Create(xmlPath, settings);
             Dict_SpaceShips = new Dictionary<string, string>();
-            string spaceShipKey = "";
             string spaceShipValue = "";
+
+            label4.Visible = true;
+            lbl_spaceshipname.Visible = true;
+            pbx_blueprint.Visible = true;
+            tableLayoutPanel2.Visible = true;
+            rtbx_description.Visible = true;
+
 
             if (reader.ReadToFollowing("TechnicalInfo"))
             {
@@ -76,7 +91,7 @@ namespace App
 
             var xmlStr = File.ReadAllText(xmlPath);
             var str = XElement.Parse(xmlStr);
-            var result = str.Element("TechnicalInfo").Elements("InfoDetails").Elements("InfoDetail").
+            result = str.Element("TechnicalInfo").Elements("InfoDetails").Elements("InfoDetail").
                             Where(x => x.Element("idInfoDetail").Value.Equals(spaceShipValue)).ToList();
 
 
@@ -91,36 +106,72 @@ namespace App
                 lst_values.Items.Add(dato.Value.ToString());
             }
 
+
             pbx_frontview.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("FrontView").FirstOrDefault().Value.ToString());
             pbx_sideview.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("SideView").FirstOrDefault().Value.ToString());
             pbx_topview.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("TopView").FirstOrDefault().Value.ToString());
             pbx_rearview.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("RearView").FirstOrDefault().Value.ToString());
             pbx_view360.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("View360").FirstOrDefault().Value.ToString());
 
-        }
+            try
+            {
+                pnl_bigimage.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("GeneralView").FirstOrDefault().Value.ToString());
+            }
+            catch (OutOfMemoryException)
+            {
 
-        private void pbx_frontview_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pbx_sideview_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbx_topview_Click(object sender, EventArgs e)
-        {
+            }
 
         }
 
-        private void pbx_rearview_Click(object sender, EventArgs e)
+        private void pbx_frontview_MouseHover(object sender, EventArgs e)
         {
+            pnl_bigimage.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("FrontView").FirstOrDefault().Value.ToString());
 
         }
 
-        private void pbx_view360_Click(object sender, EventArgs e)
+        private void pbx_sideview_MouseHover(object sender, EventArgs e)
         {
+            pnl_bigimage.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("SideView").FirstOrDefault().Value.ToString());
 
+        }
+
+        private void pbx_topview_MouseHover(object sender, EventArgs e)
+        {
+            pnl_bigimage.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("TopView").FirstOrDefault().Value.ToString());
+
+        }
+
+        private void pbx_rearview_MouseHover(object sender, EventArgs e)
+        {
+            pnl_bigimage.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("RearView").FirstOrDefault().Value.ToString());
+
+        }
+
+        private void pbx_view360_MouseHover(object sender, EventArgs e)
+        {
+            AxWMPLib.AxWindowsMediaPlayer wmp = new AxWMPLib.AxWindowsMediaPlayer();
+
+            try
+            {
+                pnl_bigimage.Image = Image.FromFile("..\\images\\" + spaceShipKey + "\\" + result.Elements("GeneralView").FirstOrDefault().Value.ToString());
+            } catch (OutOfMemoryException)
+            {
+
+            }
+            pnl_image_or_video.Controls.Add(wmp);
+            //wmp.Ctlenabled = false;
+            wmp.URL = "..\\images\\" + spaceShipKey + "\\" + result.Elements("GeneralView").FirstOrDefault().Value.ToString();
+            pnl_bigimage.Image = null;
+            
+
+        }
+
+        private void pbx_blueprint_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("..\\images\\" + spaceShipKey + "\\" + result.Elements("pdfFile").FirstOrDefault().Value.ToString());
+
+            //pdfFile
         }
     }
 }

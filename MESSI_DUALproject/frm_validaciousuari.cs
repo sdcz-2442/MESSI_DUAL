@@ -32,8 +32,6 @@ namespace MESSI_DUAL
         int intents = 0;
         private void btn_validaruser_Click(object sender, EventArgs e)
         {
-            String user;
-            String pass;
             String codeUser;
             String realpass;
 

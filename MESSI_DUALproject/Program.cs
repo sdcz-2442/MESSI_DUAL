@@ -16,7 +16,7 @@ namespace MESSI_DUAL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_validaciousuari());
+            Application.Run(new frm_pantallaprincipal());
         }
     }
 }

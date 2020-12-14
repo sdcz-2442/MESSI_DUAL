@@ -29,6 +29,7 @@ namespace App
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_infoSpaceShips));
             this.pnl_bigimage = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pbx_sideview = new System.Windows.Forms.PictureBox();
@@ -45,10 +46,11 @@ namespace App
             this.lst_data = new System.Windows.Forms.ListBox();
             this.lst_values = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lstNodes = new System.Windows.Forms.ListBox();
             this.rtbx_description = new System.Windows.Forms.RichTextBox();
             this.trustedDevicesTableAdapter1 = new App.DarkCoreDataSetTableAdapters.TrustedDevicesTableAdapter();
             this.pnl_image_or_video = new System.Windows.Forms.Panel();
+            this.wmp1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.lstNodes = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_bigimage)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_sideview)).BeginInit();
@@ -59,6 +61,7 @@ namespace App
             ((System.ComponentModel.ISupportInitialize)(this.pbx_blueprint)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.pnl_image_or_video.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wmp1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_bigimage
@@ -246,15 +249,6 @@ namespace App
             this.label4.TabIndex = 10;
             this.label4.Text = "Spaceship Technical Information";
             // 
-            // lstNodes
-            // 
-            this.lstNodes.FormattingEnabled = true;
-            this.lstNodes.Location = new System.Drawing.Point(2, 2);
-            this.lstNodes.Name = "lstNodes";
-            this.lstNodes.Size = new System.Drawing.Size(93, 82);
-            this.lstNodes.TabIndex = 13;
-            this.lstNodes.SelectedValueChanged += new System.EventHandler(this.lstNodes_SelectedValueChanged);
-            // 
             // rtbx_description
             // 
             this.rtbx_description.Location = new System.Drawing.Point(346, 277);
@@ -269,11 +263,32 @@ namespace App
             // 
             // pnl_image_or_video
             // 
+            this.pnl_image_or_video.Controls.Add(this.wmp1);
             this.pnl_image_or_video.Controls.Add(this.pnl_bigimage);
             this.pnl_image_or_video.Location = new System.Drawing.Point(346, 44);
             this.pnl_image_or_video.Name = "pnl_image_or_video";
             this.pnl_image_or_video.Size = new System.Drawing.Size(221, 182);
             this.pnl_image_or_video.TabIndex = 15;
+            // 
+            // wmp1
+            // 
+            this.wmp1.Enabled = true;
+            this.wmp1.Location = new System.Drawing.Point(0, 4);
+            this.wmp1.Name = "wmp1";
+            this.wmp1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmp1.OcxState")));
+            this.wmp1.Size = new System.Drawing.Size(218, 173);
+            this.wmp1.TabIndex = 4;
+            // 
+            // lstNodes
+            // 
+            this.lstNodes.BackColor = System.Drawing.Color.White;
+            this.lstNodes.FormattingEnabled = true;
+            this.lstNodes.Location = new System.Drawing.Point(2, 2);
+            this.lstNodes.Margin = new System.Windows.Forms.Padding(0);
+            this.lstNodes.Name = "lstNodes";
+            this.lstNodes.Size = new System.Drawing.Size(93, 82);
+            this.lstNodes.TabIndex = 13;
+            this.lstNodes.SelectedValueChanged += new System.EventHandler(this.lstNodes_SelectedValueChanged);
             // 
             // frm_infoSpaceShips
             // 
@@ -306,6 +321,7 @@ namespace App
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.pnl_image_or_video.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.wmp1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,12 +342,13 @@ namespace App
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox lstNodes;
         private System.Windows.Forms.PictureBox pbx_blueprint;
         private System.Windows.Forms.RichTextBox rtbx_description;
         private System.Windows.Forms.ListBox lst_data;
         private System.Windows.Forms.ListBox lst_values;
         private DarkCoreDataSetTableAdapters.TrustedDevicesTableAdapter trustedDevicesTableAdapter1;
         private System.Windows.Forms.Panel pnl_image_or_video;
+        private AxWMPLib.AxWindowsMediaPlayer wmp1;
+        private System.Windows.Forms.ListBox lstNodes;
     }
 }

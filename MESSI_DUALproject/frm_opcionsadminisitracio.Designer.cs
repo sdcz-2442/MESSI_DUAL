@@ -165,8 +165,7 @@
             this.Controls.Add(this.btn_admindispositius);
             this.Name = "frm_opcionsadminisitracio";
             this.Text = "frm_opcionsadminisitracio";
-            this.Load += new System.EventHandler(this.frm_opcionsadminisitracio_Load);
-            this.Controls.SetChildIndex(this.btn_admindispositius, 0);
+            this.Load += new System.EventHandler(this.frm_opcionsadminisitracio_Load);            this.Controls.SetChildIndex(this.btn_admindispositius, 0);
             this.Controls.SetChildIndex(this.btn_admincoordenades, 0);
             this.Controls.SetChildIndex(this.btn_adminusers, 0);
             this.Controls.SetChildIndex(this.panel3, 0);

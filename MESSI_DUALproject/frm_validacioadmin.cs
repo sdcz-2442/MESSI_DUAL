@@ -54,7 +54,8 @@ namespace MESSI_DUAL
                     button3.FlatStyle = FlatStyle.Flat;
                     button3.ForeColor = Color.FromArgb(67, 111, 138);
                     button3.BackColor = Color.FromArgb(247, 251, 225);
-                    button3.Font = new Font("Gill Sans MT", 16, FontStyle.Bold);
+                    button3.Font = new Font("Gill Sans MT", 16);
+                        //"Gill Sans MT", 16, FontStyle.Bold);
                     button3.Size = new System.Drawing.Size(94, 40);
                     button3.Margin = new Padding(4);
 

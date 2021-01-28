@@ -43,14 +43,24 @@ namespace MESSI_DUAL
             form2.Show();
         }
 
-        private void btn_option3_Click(object sender, EventArgs e)
+        private void btn_data_Click(object sender, EventArgs e)
         {
             formShowPanel.Controls.Clear();
+            frm_datamanegement form3 = new frm_datamanegement();
+            form3.TopLevel = false;
+            form3.AutoScroll = true;
+            this.formShowPanel.Controls.Add(form3);
+            form3.Show();
         }
 
         private void btn_opntion4_Click(object sender, EventArgs e)
         {
             formShowPanel.Controls.Clear();
+            frm_balisses form4 = new frm_balisses();
+            form4.TopLevel = false;
+            form4.AutoScroll = true;
+            this.formShowPanel.Controls.Add(form4);
+            form4.Show();
         }
     }
 }

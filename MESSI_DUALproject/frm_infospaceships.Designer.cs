@@ -172,7 +172,7 @@ namespace App
             // 
             this.pbx_blueprint.Location = new System.Drawing.Point(101, 2);
             this.pbx_blueprint.Name = "pbx_blueprint";
-            this.pbx_blueprint.Size = new System.Drawing.Size(229, 230);
+            this.pbx_blueprint.Size = new System.Drawing.Size(239, 230);
             this.pbx_blueprint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_blueprint.TabIndex = 0;
             this.pbx_blueprint.TabStop = false;
@@ -248,6 +248,7 @@ namespace App
             this.label4.Size = new System.Drawing.Size(207, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Spaceship Technical Information";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // rtbx_description
             // 

@@ -31,15 +31,16 @@ namespace App
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.IgnoreWhitespace = true;
             XmlReader reader = XmlReader.Create(xmlPath, settings);
+
+
             lstNodes.Items.Clear();
 
-            label4.Visible = false;
             lbl_spaceshipname.Visible = false;
             pbx_blueprint.Visible = false;
             tableLayoutPanel2.Visible = false;
             rtbx_description.Visible = false;
             wmp1.Visible = false;
-            //axWindowsMediaPlayer1.Visible = false;
+            lstNodes.Visible = false;
 
             if (reader.ReadToFollowing("TechnicalInfo"))
             {
@@ -51,7 +52,6 @@ namespace App
                     }
                 }
             }
- 
         }
 
         private void lstNodes_SelectedValueChanged(object sender, EventArgs e)
@@ -61,15 +61,12 @@ namespace App
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.IgnoreWhitespace = true;
             XmlReader reader = XmlReader.Create(xmlPath, settings);
+
             Dict_SpaceShips = new Dictionary<string, string>();
+
             string spaceShipValue = "";
 
-            //  Image = null;
-
-            //label4.Text = "";
-            //lbl_spaceshipname.Text = "";
             pbx_blueprint.Image = null;
-            //tableLayoutPanel2.Image = null;
             rtbx_description.Text = "";
             pnl_bigimage.Image = null;
             wmp1.Visible = false;
@@ -80,7 +77,6 @@ namespace App
             tableLayoutPanel2.Visible = true;
             rtbx_description.Visible = true;
             pnl_bigimage.Visible = true;
-            //wmp1.Visible = true;
 
 
             if (reader.ReadToFollowing("TechnicalInfo"))
@@ -107,7 +103,6 @@ namespace App
             var str = XElement.Parse(xmlStr);
             result = str.Element("TechnicalInfo").Elements("InfoDetails").Elements("InfoDetail").
                             Where(x => x.Element("idInfoDetail").Value.Equals(spaceShipValue)).ToList();
-
 
             pbx_blueprint.Image = Image.FromFile("..\\images\\"+ spaceShipKey+"\\"+result.Elements("Blueprint").FirstOrDefault().Value.ToString());
             rtbx_description.Text = result.Elements("textInfoDetail").FirstOrDefault().Value.ToString();
@@ -175,6 +170,7 @@ namespace App
             wmp1.URL = @"images\" + spaceShipKey + @"\" + result.Elements("GeneralView").FirstOrDefault().Value.ToString();
             wmp1.uiMode = "none";
             wmp1.Ctlcontrols.play();
+            wmp1.settings.setMode("loop",true);
             //wmp1.controls.play;
             
 
@@ -185,6 +181,11 @@ namespace App
             System.Diagnostics.Process.Start("..\\images\\" + spaceShipKey + "\\" + result.Elements("pdfFile").FirstOrDefault().Value.ToString());
 
             //pdfFile
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            lstNodes.Visible = true;
         }
     }
 }

@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_nom = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_option3 = new System.Windows.Forms.Button();
+            this.btn_data = new System.Windows.Forms.Button();
             this.btn_technicalinfo = new System.Windows.Forms.Button();
             this.btn_opntion4 = new System.Windows.Forms.Button();
             this.btn_blueprints = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             // pnl_menu
             // 
             this.pnl_menu.Controls.Add(this.panel2);
-            this.pnl_menu.Controls.Add(this.btn_option3);
+            this.pnl_menu.Controls.Add(this.btn_data);
             this.pnl_menu.Controls.Add(this.btn_technicalinfo);
             this.pnl_menu.Controls.Add(this.btn_opntion4);
             this.pnl_menu.Controls.Add(this.btn_blueprints);
@@ -100,25 +100,25 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_option3
+            // btn_data
             // 
-            this.btn_option3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.btn_option3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.btn_option3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.btn_option3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.btn_option3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_option3.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_option3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
-            this.btn_option3.Image = ((System.Drawing.Image)(resources.GetObject("btn_option3.Image")));
-            this.btn_option3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_option3.Location = new System.Drawing.Point(0, 287);
-            this.btn_option3.Name = "btn_option3";
-            this.btn_option3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_option3.Size = new System.Drawing.Size(229, 71);
-            this.btn_option3.TabIndex = 3;
-            this.btn_option3.Text = "      Opció 3";
-            this.btn_option3.UseVisualStyleBackColor = false;
-            this.btn_option3.Click += new System.EventHandler(this.btn_option3_Click);
+            this.btn_data.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            this.btn_data.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            this.btn_data.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            this.btn_data.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            this.btn_data.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_data.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
+            this.btn_data.Image = ((System.Drawing.Image)(resources.GetObject("btn_data.Image")));
+            this.btn_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_data.Location = new System.Drawing.Point(0, 287);
+            this.btn_data.Name = "btn_data";
+            this.btn_data.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_data.Size = new System.Drawing.Size(229, 71);
+            this.btn_data.TabIndex = 3;
+            this.btn_data.Text = "      Data";
+            this.btn_data.UseVisualStyleBackColor = false;
+            this.btn_data.Click += new System.EventHandler(this.btn_data_Click);
             // 
             // btn_technicalinfo
             // 
@@ -182,9 +182,9 @@
             // 
             // formShowPanel
             // 
-            this.formShowPanel.Location = new System.Drawing.Point(232, 48);
+            this.formShowPanel.Location = new System.Drawing.Point(235, 57);
             this.formShowPanel.Name = "formShowPanel";
-            this.formShowPanel.Size = new System.Drawing.Size(568, 402);
+            this.formShowPanel.Size = new System.Drawing.Size(556, 381);
             this.formShowPanel.TabIndex = 5;
             // 
             // frm_pantallaprincipal
@@ -214,7 +214,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_nom;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_option3;
+        private System.Windows.Forms.Button btn_data;
         private System.Windows.Forms.Button btn_technicalinfo;
         private System.Windows.Forms.Button btn_opntion4;
         private System.Windows.Forms.Button btn_blueprints;

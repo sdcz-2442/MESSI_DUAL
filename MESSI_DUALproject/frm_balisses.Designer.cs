@@ -71,7 +71,7 @@ namespace App
             this.panel1.Controls.Add(this.btn_configurar);
             this.panel1.Location = new System.Drawing.Point(66, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(429, 197);
+            this.panel1.Size = new System.Drawing.Size(429, 166);
             this.panel1.TabIndex = 11;
             // 
             // label1
@@ -143,6 +143,7 @@ namespace App
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_balisses";
             this.Text = "frm_balisses";
+            this.Load += new System.EventHandler(this.frm_balisses_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

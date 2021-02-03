@@ -74,9 +74,9 @@ namespace App
             //2.Un nombre entre 2 i 7 per al divisor.
             bool numgrupscicleOK = false;
             bool numdivisorOK = false;
-
-            string pattern1 = "^[0-9]*$";
-            string pattern2 = "^[0-9]*$";
+            //[5-9]|1[0-9]|20
+            string pattern1 = "^[5-9]|1[0-9]|20*$";
+            string pattern2 = "^[2-7]*$";
             string input1 = tbx_grupscicle.Text.Trim();
             string input2 = tbx_divisor.Text.Trim();
 
@@ -86,31 +86,19 @@ namespace App
             {
                 numgrupscicleOK = true;
                 numdivisorOK = true;
+                MessageBox.Show("OK");
 
             }
             else
             {
+                MessageBox.Show("Els números han de ser del -5 al 20- i del -2 al 7-");
+
                 numgrupscicleOK = false;
                 numdivisorOK = false;
 
             }
 
-            if (numgrupscicleOK && numgrupscicleOK)
-            {
-
-            }
-
             //Textbox 1 Un nombre entre 5 i 20 per al nombre de grups del cicle tbx_grupscicle
-
-
-            //if (_InputSelection == InputType.Integer) //Si es numero
-            //{
-            //    string pattern = "^[0-9]*$";
-            //    string input = ((TextBox)sender).Text.Trim();
-
-            //    Regexp(pattern, input);
-
-            //}
             //Texbox 2 Un nombre entre 2 i 7 per al divisor. tbx_divisor
 
         }

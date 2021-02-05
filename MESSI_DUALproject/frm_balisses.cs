@@ -60,6 +60,7 @@ namespace App
                 MessageBox.Show(String.Format("You selected port '{0}'", cmb_arduinoport.SelectedItem));
                 //Connect(cmb_arduinoport.SelectedItem.ToString());
                 var port = new SerialPort(cmb_arduinoport.SelectedItem.ToString());
+                string encender = "a";
 
                 if (!port.IsOpen)
                 {
@@ -67,7 +68,8 @@ namespace App
                     port.Open();
 
                     //aquí va el restoouurll
-                    //ArduinoPort.Write("b");
+                    ArduinoPort.Write(encender);
+
                 }
 
                 //CUANDO TRUE, LA 1A LUZ SE ENCIEND E5 SEC
@@ -94,6 +96,7 @@ namespace App
             string pattern2 = "^[2-7]*$";
             string input1 = tbx_grupscicle.Text.Trim();
             string input2 = tbx_divisor.Text.Trim();
+            string envioArduino = input1 + ";" + input2;
 
             Regex regex1 = new Regex(pattern1);
             Regex regex2 = new Regex(pattern2);
@@ -111,14 +114,18 @@ namespace App
                     port.BaudRate = 19200;
                     port.Open();
 
-                    //aquí va el restoouurll
+                    //ArduinoPort.Write("b");
+                    ArduinoPort.Write(envioArduino);
+                    //ArduinoPort.Write(input2.ToString());
+                    //substring 
+
                 }
 
 
             }
             else
             {
-                MessageBox.Show("Els números han de ser del -5 al 20- i del -2 al 7-");
+                MessageBox.Show("Els números han de ser del [5 al 20] i del [2 al 7]");
 
                 numgrupscicleOK = false;
                 numdivisorOK = false;

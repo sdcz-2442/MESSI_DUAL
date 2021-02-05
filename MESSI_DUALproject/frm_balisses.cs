@@ -36,20 +36,21 @@ namespace App
 
         }
 
-        private void Connect(string portName)
-        {
-            var port = new SerialPort(portName);
-            if (!port.IsOpen)
-            {
-                port.BaudRate = 19200;
-                port.Open();
+        //private void Connect(string portName)
+        //{
+        //    var port = new SerialPort(portName);
+        //    if (!port.IsOpen)
+        //    {
+        //        port.BaudRate = 19200;
+        //        port.Open();
 
-                //aquí va el restoouurll
-            }
-        }
+        //        //aquí va el restoouurll
+        //    }
+        //}
 
         private void btn_connectar_Click(object sender, EventArgs e)
         {
+            bool conectada = false;
             //El botó Connectar obrirà el port seleccionat i 
             //per verificar que la comunicació ha estat reeixida, encendra els
             //3 LEDs durant 5 segons.
@@ -57,11 +58,25 @@ namespace App
             if (cmb_arduinoport.SelectedIndex > -1)
             {
                 MessageBox.Show(String.Format("You selected port '{0}'", cmb_arduinoport.SelectedItem));
-                Connect(cmb_arduinoport.SelectedItem.ToString());
+                //Connect(cmb_arduinoport.SelectedItem.ToString());
+                var port = new SerialPort(cmb_arduinoport.SelectedItem.ToString());
+
+                if (!port.IsOpen)
+                {
+                    port.BaudRate = 19200;
+                    port.Open();
+
+                    //aquí va el restoouurll
+                    //ArduinoPort.Write("b");
+                }
+
+                //CUANDO TRUE, LA 1A LUZ SE ENCIEND E5 SEC
+                conectada = true;
             }
             else
             {
                 MessageBox.Show("Please select a port first");
+                conectada = false;
             }
 
         }
@@ -86,7 +101,19 @@ namespace App
             {
                 numgrupscicleOK = true;
                 numdivisorOK = true;
-                MessageBox.Show("OK");
+
+                //input1 = ciclo
+                //input2 = divisor
+                var port = new SerialPort(cmb_arduinoport.SelectedItem.ToString());
+
+                if (!port.IsOpen)
+                {
+                    port.BaudRate = 19200;
+                    port.Open();
+
+                    //aquí va el restoouurll
+                }
+
 
             }
             else

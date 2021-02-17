@@ -153,6 +153,12 @@
     <Compile Include="frm_popup.Designer.cs">
       <DependentUpon>frm_popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_RFIDreader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_RFIDreader.Designer.cs">
+      <DependentUpon>frm_RFIDreader.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_popup.resx">
       <DependentUpon>frm_popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_RFIDreader.resx">
+      <DependentUpon>frm_RFIDreader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_splash.resx">
       <DependentUpon>frm_splash.cs</DependentUpon>

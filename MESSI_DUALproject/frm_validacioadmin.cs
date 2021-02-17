@@ -91,7 +91,6 @@ namespace MESSI_DUAL
 
         private void btn_validar_Click(object sender, EventArgs e)
         {
-            int coordinates = 1234;
             bool valid = false;
             String coord;
             String value;

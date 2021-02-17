@@ -15,7 +15,7 @@ namespace App
 {
     public partial class frm_balisses : Form
     {
-        System.IO.Ports.SerialPort ArduinoPort;
+        SerialPort ArduinoPort;
         public class Port
         {
             public string Name { get; set; }
@@ -50,7 +50,6 @@ namespace App
 
         private void btn_connectar_Click(object sender, EventArgs e)
         {
-            bool conectada = false;
             //El botó Connectar obrirà el port seleccionat i 
             //per verificar que la comunicació ha estat reeixida, encendra els
             //3 LEDs durant 5 segons.
@@ -69,16 +68,11 @@ namespace App
 
                     //aquí va el restoouurll
                     ArduinoPort.Write(encender);
-
                 }
-
-                //CUANDO TRUE, LA 1A LUZ SE ENCIEND E5 SEC
-                conectada = true;
             }
             else
             {
                 MessageBox.Show("Please select a port first");
-                conectada = false;
             }
 
         }
@@ -89,21 +83,19 @@ namespace App
             //que el rang i tipus de valors introduïts per l’usuari són correctes.En concret podem introduir:
             //1.Un nombre entre 5 i 20 per al nombre de grups del cicle
             //2.Un nombre entre 2 i 7 per al divisor.
-            bool numgrupscicleOK = false;
-            bool numdivisorOK = false;
             //[5-9]|1[0-9]|20
             string pattern1 = "^[5-9]|1[0-9]|20*$";
             string pattern2 = "^[2-7]*$";
             string input1 = tbx_grupscicle.Text.Trim();
             string input2 = tbx_divisor.Text.Trim();
-            string envioArduino = input1 + ";" + input2;
+            string envioArduino = input2 + ";" + input1;
+            // a = encender 5 sec
+            //x;xx -> substring(1,2) (si empieza en 0), si empieza en 1 substring(2,3) 
 
             Regex regex1 = new Regex(pattern1);
             Regex regex2 = new Regex(pattern2);
             if (regex1.IsMatch(input1) && regex2.IsMatch(input2))
             {
-                numgrupscicleOK = true;
-                numdivisorOK = true;
 
                 //input1 = ciclo
                 //input2 = divisor
@@ -126,9 +118,6 @@ namespace App
             else
             {
                 MessageBox.Show("Els números han de ser del [5 al 20] i del [2 al 7]");
-
-                numgrupscicleOK = false;
-                numdivisorOK = false;
 
             }
 

@@ -62,5 +62,10 @@ namespace MESSI_DUAL
             this.formShowPanel.Controls.Add(form4);
             form4.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            new frm_RFIDreader().Show();
+        }
     }
 }

@@ -20,7 +20,6 @@ namespace MESSI_DUAL
 
         String idDevice;
         String idUser;
-        String idDeviceMESSI;
 
         public frm_admingestiousuaris()
         {

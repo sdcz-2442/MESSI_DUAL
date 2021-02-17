@@ -15,8 +15,7 @@ namespace MESSI_DUAL
 {
     public partial class frm_admingestiodispositius : MESSI_FormBase.frm_base
     {
-        bool existe;
-        MESSI_AccesoDatos.AccesoDatos ad_lib;
+        AccesoDatos ad_lib;
         DataSet dts;
         public frm_admingestiodispositius()
         {

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_admingestiodispositius));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_back = new System.Windows.Forms.Button();
             this.lbl_nom = new System.Windows.Forms.Label();
             this.btn_guardardisp = new System.Windows.Forms.Button();
             this.btn_delete_coord = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbx_usermac = new System.Windows.Forms.TextBox();
             this.tbx_userhostname = new System.Windows.Forms.TextBox();
-            this.btn_back = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +51,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(343, 55);
             this.panel3.TabIndex = 8;
+            // 
+            // btn_back
+            // 
+            this.btn_back.FlatAppearance.BorderSize = 0;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
+            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
+            this.btn_back.Location = new System.Drawing.Point(0, 11);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(30, 27);
+            this.btn_back.TabIndex = 15;
+            this.btn_back.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // lbl_nom
             // 
@@ -151,21 +166,6 @@
             this.tbx_userhostname.ReadOnly = true;
             this.tbx_userhostname.Size = new System.Drawing.Size(285, 35);
             this.tbx_userhostname.TabIndex = 14;
-            // 
-            // btn_back
-            // 
-            this.btn_back.FlatAppearance.BorderSize = 0;
-            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
-            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
-            this.btn_back.Location = new System.Drawing.Point(0, 11);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(30, 27);
-            this.btn_back.TabIndex = 15;
-            this.btn_back.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // frm_admingestiodispositius
             // 

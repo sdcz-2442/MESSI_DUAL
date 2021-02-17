@@ -1,0 +1,15 @@
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\MESSI_AccesoDatos.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\MESSI_AccesoDatos.pdb
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\System.Security.AccessControl.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\System.Security.Permissions.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\System.Security.AccessControl.xml
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\System.Security.Permissions.xml
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\obj\Debug\MESSI_AccesoDatos.csprojAssemblyReference.cache
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\obj\Debug\MESSI_AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\obj\Debug\MESSI_AccesoDatos.csproj.CopyComplete
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\obj\Debug\MESSI_AccesoDatos.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_AccesoDatos\obj\Debug\MESSI_AccesoDatos.pdb

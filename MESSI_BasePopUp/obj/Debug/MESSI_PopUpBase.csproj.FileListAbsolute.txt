@@ -11,3 +11,16 @@ D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.dll
 D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.pdb
 D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.btn_keypadcontrol.resources
 D:\Proyectos\github\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.Properties.Resources.resources
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\bin\Debug\MESSI_BasePopUp.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\bin\Debug\MESSI_BasePopUp.pdb
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\bin\Debug\MESSI_FormBase.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\bin\Debug\MESSI_FormBase.pdb
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csprojAssemblyReference.cache
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.btn_keypadcontrol.resources
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.frm_basepopup.resources
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.Properties.Resources.resources
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csproj.GenerateResource.cache
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csproj.CoreCompileInputs.cache
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_PopUpBase.csproj.CopyComplete
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.dll
+C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_BasePopUp\obj\Debug\MESSI_BasePopUp.pdb

@@ -15,6 +15,7 @@ namespace App
     public partial class frm_RFIDreader : MESSI_FormBase.frm_base
     {
         Thread openPort;
+        SerialPort ArduinoPort;
         public frm_RFIDreader()
         {
             InitializeComponent();
@@ -65,6 +66,7 @@ namespace App
 
         private void btn_disconnect_Click(object sender, EventArgs e)
         {
+            if (ArduinoPort.IsOpen) ArduinoPort.Close();
             openPort.Abort();
 
             if (!openPort.IsAlive)

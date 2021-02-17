@@ -234,6 +234,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include=".editorconfig" />
     <None Include="DarkCoreDataSet.xsc">
       <DependentUpon>DarkCoreDataSet.xsd</DependentUpon>
     </None>

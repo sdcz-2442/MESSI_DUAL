@@ -11,3 +11,5 @@ C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_Libreria\obj\Debug\MESSI_Librer
 C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_Libreria\obj\Debug\MESSI_Libreria.csproj.CoreCompileInputs.cache
 C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_Libreria\obj\Debug\MESSI_Libreria.dll
 C:\Users\saman\Documents\GitHub\MESSI_DUAL\MESSI_Libreria\obj\Debug\MESSI_Libreria.pdb
+D:\Proyectos\github\MESSI_DUAL\MESSI_Libreria\obj\Debug\MESSI_Libreria.dk_combobox.resources
+D:\Proyectos\github\MESSI_DUAL\MESSI_Libreria\obj\Debug\MESSI_Libreria.csproj.GenerateResource.cache

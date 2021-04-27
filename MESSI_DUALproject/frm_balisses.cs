@@ -16,6 +16,10 @@ namespace App
     public partial class frm_balisses : Form
     {
         SerialPort ArduinoPort;
+<<<<<<< HEAD
+=======
+        
+>>>>>>> sam
         public class Port
         {
             public string Name { get; set; }
@@ -30,7 +34,11 @@ namespace App
         public frm_balisses()
         {
             InitializeComponent();
+<<<<<<< HEAD
 
+=======
+            ArduinoPort = new System.IO.Ports.SerialPort();
+>>>>>>> sam
             //Combobos.ItemsSource = ports;
             //Combobos.SelectedValuePath = "Name";
 
@@ -58,6 +66,7 @@ namespace App
             {
                 MessageBox.Show(String.Format("You selected port '{0}'", cmb_arduinoport.SelectedItem));
                 //Connect(cmb_arduinoport.SelectedItem.ToString());
+<<<<<<< HEAD
                 var port = new SerialPort(cmb_arduinoport.SelectedItem.ToString());
                 string encender = "a";
 
@@ -68,6 +77,22 @@ namespace App
 
                     //aquí va el restoouurll
                     ArduinoPort.Write(encender);
+=======
+                //var port = new SerialPort(cmb_arduinoport.SelectedItem.ToString());
+                string encender = "a";
+                ArduinoPort.PortName = cmb_arduinoport.SelectedItem.ToString();  //sustituir por vuestro 
+                //ArduinoPort.BaudRate = 9600;
+                //ArduinoPort.Open();
+                //ArduinoPort.PortName = "COM6";
+                if (ArduinoPort.IsOpen)
+                {
+                    ArduinoPort.BaudRate = 9600;
+                    ArduinoPort.Open();
+                    ArduinoPort.Write(encender);
+                } else
+                {
+                    MessageBox.Show("Error");
+>>>>>>> sam
                 }
             }
             else
@@ -99,6 +124,7 @@ namespace App
 
                 //input1 = ciclo
                 //input2 = divisor
+<<<<<<< HEAD
                 var port = new SerialPort(cmb_arduinoport.SelectedItem.ToString());
 
                 if (!port.IsOpen)
@@ -112,6 +138,23 @@ namespace App
                     //substring 
 
                 }
+=======
+                //var port = new SerialPort(cmb_arduinoport.SelectedItem.ToString());
+                //ArduinoPort.PortName = cmb_arduinoport.SelectedItem.ToString();
+
+                //if (ArduinoPort.IsOpen)
+                //{
+                //ArduinoPort.PortName = "COM6";
+                ArduinoPort.BaudRate = 9600;
+                ArduinoPort.Open();
+
+                    //ArduinoPort.Write("b");
+                ArduinoPort.Write(envioArduino);
+                    //ArduinoPort.Write(input2.ToString());
+                    //substring 
+
+                //}
+>>>>>>> sam
 
 
             }

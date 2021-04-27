@@ -30,6 +30,10 @@ namespace App
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.IgnoreWhitespace = true;
             XmlReader reader = XmlReader.Create(xmlPath, settings);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             lstNodes.Items.Clear();
 
             label4.Visible = false;
@@ -84,6 +88,8 @@ namespace App
                 }
             }
             spaceShipKey = this.lstNodes.SelectedItem.ToString();
+
+            //lbl_spaceshipname.Text = this.lstNodes.SelectedItem.ToString();
 
             spaceShipValue = Dict_SpaceShips[spaceShipKey];
 

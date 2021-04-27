@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_pantallaprincipal));
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_nom = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_data = new System.Windows.Forms.Button();
+            this.btn_option3 = new System.Windows.Forms.Button();
             this.btn_technicalinfo = new System.Windows.Forms.Button();
             this.btn_opntion4 = new System.Windows.Forms.Button();
             this.btn_blueprints = new System.Windows.Forms.Button();
@@ -46,8 +47,9 @@
             // 
             // pnl_menu
             // 
+            this.pnl_menu.Controls.Add(this.button1);
             this.pnl_menu.Controls.Add(this.panel2);
-            this.pnl_menu.Controls.Add(this.btn_data);
+            this.pnl_menu.Controls.Add(this.btn_option3);
             this.pnl_menu.Controls.Add(this.btn_technicalinfo);
             this.pnl_menu.Controls.Add(this.btn_opntion4);
             this.pnl_menu.Controls.Add(this.btn_blueprints);
@@ -56,6 +58,26 @@
             this.pnl_menu.Name = "pnl_menu";
             this.pnl_menu.Size = new System.Drawing.Size(229, 435);
             this.pnl_menu.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 377);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(229, 58);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "      Active B";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -67,6 +89,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 121);
             this.panel2.TabIndex = 4;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // label1
             // 
@@ -99,6 +122,28 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+<<<<<<< Updated upstream
+            // 
+            // btn_option3
+            // 
+            this.btn_option3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            this.btn_option3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            this.btn_option3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            this.btn_option3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            this.btn_option3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_option3.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_option3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
+            this.btn_option3.Image = ((System.Drawing.Image)(resources.GetObject("btn_option3.Image")));
+            this.btn_option3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_option3.Location = new System.Drawing.Point(0, 287);
+            this.btn_option3.Name = "btn_option3";
+            this.btn_option3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_option3.Size = new System.Drawing.Size(229, 71);
+            this.btn_option3.TabIndex = 3;
+            this.btn_option3.Text = "      Opció 3";
+            this.btn_option3.UseVisualStyleBackColor = false;
+            this.btn_option3.Click += new System.EventHandler(this.btn_option3_Click);
+=======
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_data
@@ -112,14 +157,15 @@
             this.btn_data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
             this.btn_data.Image = ((System.Drawing.Image)(resources.GetObject("btn_data.Image")));
             this.btn_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_data.Location = new System.Drawing.Point(0, 287);
+            this.btn_data.Location = new System.Drawing.Point(0, 255);
             this.btn_data.Name = "btn_data";
             this.btn_data.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_data.Size = new System.Drawing.Size(229, 71);
+            this.btn_data.Size = new System.Drawing.Size(229, 56);
             this.btn_data.TabIndex = 3;
             this.btn_data.Text = "      Data";
             this.btn_data.UseVisualStyleBackColor = false;
             this.btn_data.Click += new System.EventHandler(this.btn_data_Click);
+>>>>>>> Stashed changes
             // 
             // btn_technicalinfo
             // 
@@ -132,10 +178,10 @@
             this.btn_technicalinfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
             this.btn_technicalinfo.Image = ((System.Drawing.Image)(resources.GetObject("btn_technicalinfo.Image")));
             this.btn_technicalinfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_technicalinfo.Location = new System.Drawing.Point(0, 210);
+            this.btn_technicalinfo.Location = new System.Drawing.Point(0, 192);
             this.btn_technicalinfo.Name = "btn_technicalinfo";
             this.btn_technicalinfo.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_technicalinfo.Size = new System.Drawing.Size(229, 71);
+            this.btn_technicalinfo.Size = new System.Drawing.Size(229, 59);
             this.btn_technicalinfo.TabIndex = 2;
             this.btn_technicalinfo.Text = "      Tech Info";
             this.btn_technicalinfo.UseVisualStyleBackColor = false;
@@ -152,12 +198,12 @@
             this.btn_opntion4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
             this.btn_opntion4.Image = ((System.Drawing.Image)(resources.GetObject("btn_opntion4.Image")));
             this.btn_opntion4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_opntion4.Location = new System.Drawing.Point(0, 364);
+            this.btn_opntion4.Location = new System.Drawing.Point(0, 315);
             this.btn_opntion4.Name = "btn_opntion4";
             this.btn_opntion4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_opntion4.Size = new System.Drawing.Size(229, 71);
+            this.btn_opntion4.Size = new System.Drawing.Size(229, 58);
             this.btn_opntion4.TabIndex = 1;
-            this.btn_opntion4.Text = "      Opció 4";
+            this.btn_opntion4.Text = "     Passive B";
             this.btn_opntion4.UseVisualStyleBackColor = false;
             this.btn_opntion4.Click += new System.EventHandler(this.btn_opntion4_Click);
             // 
@@ -172,10 +218,10 @@
             this.btn_blueprints.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
             this.btn_blueprints.Image = ((System.Drawing.Image)(resources.GetObject("btn_blueprints.Image")));
             this.btn_blueprints.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_blueprints.Location = new System.Drawing.Point(0, 133);
+            this.btn_blueprints.Location = new System.Drawing.Point(0, 126);
             this.btn_blueprints.Name = "btn_blueprints";
             this.btn_blueprints.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_blueprints.Size = new System.Drawing.Size(229, 71);
+            this.btn_blueprints.Size = new System.Drawing.Size(229, 63);
             this.btn_blueprints.TabIndex = 0;
             this.btn_blueprints.Text = "      Blueprints";
             this.btn_blueprints.UseVisualStyleBackColor = false;
@@ -183,9 +229,9 @@
             // 
             // formShowPanel
             // 
-            this.formShowPanel.Location = new System.Drawing.Point(235, 57);
+            this.formShowPanel.Location = new System.Drawing.Point(232, 48);
             this.formShowPanel.Name = "formShowPanel";
-            this.formShowPanel.Size = new System.Drawing.Size(556, 381);
+            this.formShowPanel.Size = new System.Drawing.Size(568, 402);
             this.formShowPanel.TabIndex = 5;
             // 
             // frm_pantallaprincipal
@@ -215,10 +261,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_nom;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_data;
+        private System.Windows.Forms.Button btn_option3;
         private System.Windows.Forms.Button btn_technicalinfo;
         private System.Windows.Forms.Button btn_opntion4;
         private System.Windows.Forms.Button btn_blueprints;
         private System.Windows.Forms.Panel formShowPanel;
+        private System.Windows.Forms.Button button1;
     }
 }

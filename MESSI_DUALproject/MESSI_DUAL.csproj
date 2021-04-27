@@ -51,23 +51,10 @@
     <StartupObject>MESSI_DUAL.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
-    </Reference>
-    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,8 +64,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cls_appconfig.cs" />
@@ -111,23 +96,11 @@
     <Compile Include="frm_admingestiousuaris.Designer.cs">
       <DependentUpon>frm_admingestiousuaris.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_balisses.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_balisses.Designer.cs">
-      <DependentUpon>frm_balisses.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_baseStarKiller.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_baseStarKiller.Designer.cs">
       <DependentUpon>frm_baseStarKiller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_datamanegement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_datamanegement.Designer.cs">
-      <DependentUpon>frm_datamanegement.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_infoSpaceShips.cs">
       <SubType>Form</SubType>
@@ -153,12 +126,21 @@
     <Compile Include="frm_popup.Designer.cs">
       <DependentUpon>frm_popup.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
+=======
     <Compile Include="frm_RFIDreader.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_RFIDreader.Designer.cs">
       <DependentUpon>frm_RFIDreader.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_sistemaStarkillerUDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sistemaStarkillerUDP.Designer.cs">
+      <DependentUpon>frm_sistemaStarkillerUDP.cs</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="frm_splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,14 +173,8 @@
     <EmbeddedResource Include="frm_admingestiousuaris.resx">
       <DependentUpon>frm_admingestiousuaris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_balisses.resx">
-      <DependentUpon>frm_balisses.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_baseStarKiller.resx">
       <DependentUpon>frm_baseStarKiller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_datamanegement.resx">
-      <DependentUpon>frm_datamanegement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_infoSpaceShips.resx">
       <DependentUpon>frm_infoSpaceShips.cs</DependentUpon>
@@ -212,9 +188,15 @@
     <EmbeddedResource Include="frm_popup.resx">
       <DependentUpon>frm_popup.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< Updated upstream
+=======
     <EmbeddedResource Include="frm_RFIDreader.resx">
       <DependentUpon>frm_RFIDreader.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_sistemaStarkillerUDP.resx">
+      <DependentUpon>frm_sistemaStarkillerUDP.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> Stashed changes
     <EmbeddedResource Include="frm_splash.resx">
       <DependentUpon>frm_splash.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,7 +216,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include=".editorconfig" />
     <None Include="DarkCoreDataSet.xsc">
       <DependentUpon>DarkCoreDataSet.xsd</DependentUpon>
     </None>
@@ -251,7 +232,6 @@
     <None Include="images\Tie-Bomber\TieBomber.pdf" />
     <None Include="images\Tie-Fighter\TieFigther.pdf" />
     <None Include="images\Tie-Interceptor\TieInterceptor.pdf" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -67,5 +67,21 @@ namespace MESSI_DUAL
         {
             new frm_RFIDreader().Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formShowPanel.Controls.Clear();
+            frm_RFIDreader form5 = new frm_RFIDreader();
+            form5.TopLevel = false;
+            form5.AutoScroll = true;
+            this.formShowPanel.Controls.Add(form5);
+            form5.Show();
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            frm_sistemaStarkillerUDP form4 = new frm_sistemaStarkillerUDP();
+            form4.Show();
+        }
     }
 }

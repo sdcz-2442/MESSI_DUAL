@@ -35,7 +35,7 @@ namespace App
             this.btn_connect = new System.Windows.Forms.Button();
             this.cmb_arduinoports = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbx_grupscicle = new System.Windows.Forms.TextBox();
+            this.tbx_tagtext = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@ namespace App
             this.btn_disconnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_disconnect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
             this.btn_disconnect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_disconnect.Location = new System.Drawing.Point(576, 142);
+            this.btn_disconnect.Location = new System.Drawing.Point(391, 184);
             this.btn_disconnect.Name = "btn_disconnect";
             this.btn_disconnect.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btn_disconnect.Size = new System.Drawing.Size(161, 36);
@@ -116,13 +116,13 @@ namespace App
             this.label2.TabIndex = 16;
             this.label2.Text = "Code";
             // 
-            // tbx_grupscicle
+            // tbx_tagtext
             // 
-            this.tbx_grupscicle.Location = new System.Drawing.Point(76, 275);
-            this.tbx_grupscicle.Multiline = true;
-            this.tbx_grupscicle.Name = "tbx_grupscicle";
-            this.tbx_grupscicle.Size = new System.Drawing.Size(267, 36);
-            this.tbx_grupscicle.TabIndex = 17;
+            this.tbx_tagtext.Location = new System.Drawing.Point(76, 275);
+            this.tbx_tagtext.Multiline = true;
+            this.tbx_tagtext.Name = "tbx_tagtext";
+            this.tbx_tagtext.Size = new System.Drawing.Size(267, 36);
+            this.tbx_tagtext.TabIndex = 17;
             // 
             // frm_RFIDreader
             // 
@@ -130,7 +130,7 @@ namespace App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tbx_grupscicle);
+            this.Controls.Add(this.tbx_tagtext);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmb_arduinoports);
             this.Controls.Add(this.btn_connect);
@@ -144,7 +144,7 @@ namespace App
             this.Controls.SetChildIndex(this.btn_connect, 0);
             this.Controls.SetChildIndex(this.cmb_arduinoports, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.tbx_grupscicle, 0);
+            this.Controls.SetChildIndex(this.tbx_tagtext, 0);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -160,6 +160,6 @@ namespace App
         private System.Windows.Forms.Button btn_connect;
         private System.Windows.Forms.ComboBox cmb_arduinoports;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbx_grupscicle;
+        private System.Windows.Forms.TextBox tbx_tagtext;
     }
 }

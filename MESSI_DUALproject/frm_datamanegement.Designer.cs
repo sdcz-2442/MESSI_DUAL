@@ -29,38 +29,40 @@ namespace App
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart_calibration = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lst_calibration = new System.Windows.Forms.ListView();
             this.tbx_calibration = new System.Windows.Forms.TextBox();
             this.btn_startcalibration = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chart_calibration)).BeginInit();
             this.SuspendLayout();
             // 
             // chart_calibration
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart_calibration.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart_calibration.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart_calibration.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_calibration.Legends.Add(legend1);
             this.chart_calibration.Location = new System.Drawing.Point(12, 113);
             this.chart_calibration.Name = "chart_calibration";
             this.chart_calibration.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart_calibration.Series.Add(series2);
-            this.chart_calibration.Size = new System.Drawing.Size(211, 202);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Time";
+            this.chart_calibration.Series.Add(series1);
+            this.chart_calibration.Size = new System.Drawing.Size(270, 202);
             this.chart_calibration.TabIndex = 0;
             this.chart_calibration.Text = "chart1";
             // 
             // lst_calibration
             // 
             this.lst_calibration.HideSelection = false;
-            this.lst_calibration.Location = new System.Drawing.Point(254, 113);
+            this.lst_calibration.Location = new System.Drawing.Point(288, 113);
             this.lst_calibration.Name = "lst_calibration";
             this.lst_calibration.Size = new System.Drawing.Size(121, 202);
             this.lst_calibration.TabIndex = 1;
@@ -104,6 +106,11 @@ namespace App
             this.label4.TabIndex = 11;
             this.label4.Text = "Weapon Calibration";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frm_datamanegement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,5 +139,6 @@ namespace App
         private System.Windows.Forms.TextBox tbx_calibration;
         private System.Windows.Forms.Button btn_startcalibration;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer1;
     }
 }

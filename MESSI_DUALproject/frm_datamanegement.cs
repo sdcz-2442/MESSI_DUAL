@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-<<<<<<< HEAD
-=======
 using System.IO;
->>>>>>> sam
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,20 +21,6 @@ namespace App
 
         private void frm_datamanegement_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-
-        }
-
-        private void btn_startcalibration_Click(object sender, EventArgs e)
-        {
-
-            //chart_calibration.Series
-            //chart_calibration.Series[].Points.Add
-
-        }
-    }
-}
-=======
             chart_calibration.ChartAreas[0].AxisX.Maximum = 1200;
             chart_calibration.ChartAreas[0].AxisX.Interval = 240;
             chart_calibration.ChartAreas[0].AxisY.Maximum = 23000;
@@ -101,4 +84,3 @@ namespace App
         }
     }
 }
->>>>>>> sam

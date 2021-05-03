@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_nom = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_data = new System.Windows.Forms.Button();
+            this.btn_option3 = new System.Windows.Forms.Button();
             this.btn_technicalinfo = new System.Windows.Forms.Button();
             this.btn_opntion4 = new System.Windows.Forms.Button();
             this.btn_blueprints = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             // 
             this.pnl_menu.Controls.Add(this.button1);
             this.pnl_menu.Controls.Add(this.panel2);
-            this.pnl_menu.Controls.Add(this.btn_data);
+            this.pnl_menu.Controls.Add(this.btn_option3);
             this.pnl_menu.Controls.Add(this.btn_technicalinfo);
             this.pnl_menu.Controls.Add(this.btn_opntion4);
             this.pnl_menu.Controls.Add(this.btn_blueprints);
@@ -122,8 +122,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-<<<<<<< HEAD
-=======
 <<<<<<< Updated upstream
             // 
             // btn_option3
@@ -146,7 +144,6 @@
             this.btn_option3.UseVisualStyleBackColor = false;
             this.btn_option3.Click += new System.EventHandler(this.btn_option3_Click);
 =======
->>>>>>> sam
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_data
@@ -160,25 +157,15 @@
             this.btn_data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
             this.btn_data.Image = ((System.Drawing.Image)(resources.GetObject("btn_data.Image")));
             this.btn_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
-            this.btn_data.Location = new System.Drawing.Point(0, 287);
-            this.btn_data.Name = "btn_data";
-            this.btn_data.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_data.Size = new System.Drawing.Size(229, 71);
-=======
             this.btn_data.Location = new System.Drawing.Point(0, 255);
             this.btn_data.Name = "btn_data";
             this.btn_data.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btn_data.Size = new System.Drawing.Size(229, 56);
->>>>>>> sam
             this.btn_data.TabIndex = 3;
             this.btn_data.Text = "      Data";
             this.btn_data.UseVisualStyleBackColor = false;
             this.btn_data.Click += new System.EventHandler(this.btn_data_Click);
-<<<<<<< HEAD
-=======
 >>>>>>> Stashed changes
->>>>>>> sam
             // 
             // btn_technicalinfo
             // 
@@ -242,9 +229,9 @@
             // 
             // formShowPanel
             // 
-            this.formShowPanel.Location = new System.Drawing.Point(235, 57);
+            this.formShowPanel.Location = new System.Drawing.Point(232, 48);
             this.formShowPanel.Name = "formShowPanel";
-            this.formShowPanel.Size = new System.Drawing.Size(556, 381);
+            this.formShowPanel.Size = new System.Drawing.Size(568, 402);
             this.formShowPanel.TabIndex = 5;
             // 
             // frm_pantallaprincipal
@@ -274,7 +261,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_nom;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_data;
+        private System.Windows.Forms.Button btn_option3;
         private System.Windows.Forms.Button btn_technicalinfo;
         private System.Windows.Forms.Button btn_opntion4;
         private System.Windows.Forms.Button btn_blueprints;

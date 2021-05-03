@@ -12,18 +12,11 @@ using System.IO.Ports;
 
 namespace App
 {
-<<<<<<< HEAD
-    public partial class frm_RFIDreader : MESSI_FormBase.frm_base
-    {
-        Thread openPort;
-        SerialPort ArduinoPort;
-=======
      
     public partial class frm_RFIDreader : MESSI_FormBase.frm_base
     {
         Thread openPort;
         SerialPort RFID;
->>>>>>> sam
         public frm_RFIDreader()
         {
             InitializeComponent();
@@ -33,12 +26,6 @@ namespace App
         private void frm_RFIDreader_Load(object sender, EventArgs e)
         {
             //Cargar combobox
-<<<<<<< HEAD
-            var ports = SerialPort.GetPortNames();
-            cmb_arduinoports.DataSource = ports;
-            
-            openPort = new Thread(openPorts);
-=======
             RFID = new SerialPort();
             RFID.PortName = "COM4";
             RFID.BaudRate = 9600;
@@ -49,41 +36,12 @@ namespace App
             RFID.DataReceived += new SerialDataReceivedEventHandler(RFID_DataReceived);
 
             //openPort = new Thread();
->>>>>>> sam
         }
 
         private void btn_connect_Click(object sender, EventArgs e)
         {
             //crear thread que abra puerto y escuche
             //var port = new SerialPort(cmb_arduinoports.SelectedItem.ToString());
-<<<<<<< HEAD
-            openPort.Start();
-        }
-
-        void openPorts()
-        {
-            if (cmb_arduinoports.SelectedIndex > -1)
-            {
-                MessageBox.Show(String.Format("You selected port '{0}'", cmb_arduinoports.SelectedItem));
-                //Connect(cmb_arduinoport.SelectedItem.ToString());
-                var port = new SerialPort(cmb_arduinoports.SelectedItem.ToString());
-
-                if (!port.IsOpen)
-                {
-                    port.BaudRate = 19200;
-                    port.Open();
-
-                    //aquí va el restoouurll
-                    //ArduinoPort.Write(encender);
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select a port first");
-            }
-
-=======
 
 
             if (cmb_arduinoports.SelectedIndex > -1)
@@ -168,23 +126,11 @@ namespace App
                 //    tbx_tagtext.Text += data;
 
                 //}
->>>>>>> sam
             MessageBox.Show("Funciona y el thread está ok");
         }
 
         private void btn_disconnect_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            if (ArduinoPort.IsOpen) ArduinoPort.Close();
-            openPort.Abort();
-
-            if (!openPort.IsAlive)
-            {
-                MessageBox.Show("Funciona y el thread está ko");
-            }
-            
-=======
->>>>>>> sam
         }
     }
 }

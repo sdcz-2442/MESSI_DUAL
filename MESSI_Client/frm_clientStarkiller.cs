@@ -56,6 +56,17 @@ namespace MESSI_Client
                         valor de la funció exponencial que ja havíem utilitzat anteriorment en el sprint #6 augmentant en un
                         x i fins X=300.
                      * */
+                    //pufalskjd
+                    string SKDmessage = "SKD";
+                    int contador = 0;
+
+                    while (contador < 15)
+                    {
+
+                        SKDmessage += contador;
+                        contador++;
+                    }
+
                         if (contador < 1000)
                         {
                             double resultat = Math.Pow(Math.E, contador / 100.0);
@@ -74,7 +85,7 @@ namespace MESSI_Client
 
                             Thread.Sleep(500);
                             //tbx_sendmessages.Clear();
-
+                            //enviar 
 
                         }
                 }

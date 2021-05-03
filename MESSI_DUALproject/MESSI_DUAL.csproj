@@ -153,27 +153,18 @@
     <Compile Include="frm_popup.Designer.cs">
       <DependentUpon>frm_popup.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> sam
     <Compile Include="frm_RFIDreader.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_RFIDreader.Designer.cs">
       <DependentUpon>frm_RFIDreader.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="frm_sistemaStarkillerUDP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_sistemaStarkillerUDP.Designer.cs">
       <DependentUpon>frm_sistemaStarkillerUDP.cs</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
->>>>>>> sam
     <Compile Include="frm_splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +205,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_datamanegement.resx">
       <DependentUpon>frm_datamanegement.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_infoSpaceShips.resx">
       <DependentUpon>frm_infoSpaceShips.cs</DependentUpon>
@@ -227,21 +219,12 @@
     <EmbeddedResource Include="frm_popup.resx">
       <DependentUpon>frm_popup.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <EmbeddedResource Include="frm_RFIDreader.resx">
-      <DependentUpon>frm_RFIDreader.cs</DependentUpon>
-    </EmbeddedResource>
-=======
-<<<<<<< Updated upstream
-=======
     <EmbeddedResource Include="frm_RFIDreader.resx">
       <DependentUpon>frm_RFIDreader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_sistemaStarkillerUDP.resx">
       <DependentUpon>frm_sistemaStarkillerUDP.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> Stashed changes
->>>>>>> sam
     <EmbeddedResource Include="frm_splash.resx">
       <DependentUpon>frm_splash.cs</DependentUpon>
     </EmbeddedResource>

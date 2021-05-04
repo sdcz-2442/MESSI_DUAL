@@ -30,10 +30,6 @@ namespace App
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.IgnoreWhitespace = true;
             XmlReader reader = XmlReader.Create(xmlPath, settings);
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             lstNodes.Items.Clear();
 
             label4.Visible = false;

@@ -122,7 +122,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-<<<<<<< Updated upstream
             // 
             // btn_option3
             // 
@@ -142,30 +141,28 @@
             this.btn_option3.TabIndex = 3;
             this.btn_option3.Text = "      Opció 3";
             this.btn_option3.UseVisualStyleBackColor = false;
-            this.btn_option3.Click += new System.EventHandler(this.btn_option3_Click);
-=======
+            //this.btn_option3.Click += new System.EventHandler(this.btn_option3_Click);
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_data
             // 
-            this.btn_data.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.btn_data.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
-            this.btn_data.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.btn_data.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
-            this.btn_data.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_data.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
-            this.btn_data.Image = ((System.Drawing.Image)(resources.GetObject("btn_data.Image")));
-            this.btn_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_data.Location = new System.Drawing.Point(0, 255);
-            this.btn_data.Name = "btn_data";
-            this.btn_data.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_data.Size = new System.Drawing.Size(229, 56);
-            this.btn_data.TabIndex = 3;
-            this.btn_data.Text = "      Data";
-            this.btn_data.UseVisualStyleBackColor = false;
-            this.btn_data.Click += new System.EventHandler(this.btn_data_Click);
->>>>>>> Stashed changes
+            //this.btn_data.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            //this.btn_data.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(111)))), ((int)(((byte)(138)))));
+            //this.btn_data.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            //this.btn_data.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(138)))), ((int)(((byte)(94)))));
+            //this.btn_data.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.btn_data.Font = new System.Drawing.Font("Gill Sans MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.btn_data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(225)))));
+            //this.btn_data.Image = ((System.Drawing.Image)(resources.GetObject("btn_data.Image")));
+            //this.btn_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //this.btn_data.Location = new System.Drawing.Point(0, 255);
+            //this.btn_data.Name = "btn_data";
+            //this.btn_data.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            //this.btn_data.Size = new System.Drawing.Size(229, 56);
+            //this.btn_data.TabIndex = 3;
+            //this.btn_data.Text = "      Data";
+            //this.btn_data.UseVisualStyleBackColor = false;
+            //this.btn_data.Click += new System.EventHandler(this.btn_data_Click);
             // 
             // btn_technicalinfo
             // 

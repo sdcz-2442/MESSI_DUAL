@@ -55,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -126,8 +127,6 @@
     <Compile Include="frm_popup.Designer.cs">
       <DependentUpon>frm_popup.cs</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
-=======
     <Compile Include="frm_RFIDreader.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,7 +139,6 @@
     <Compile Include="frm_sistemaStarkillerUDP.Designer.cs">
       <DependentUpon>frm_sistemaStarkillerUDP.cs</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
     <Compile Include="frm_splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,15 +186,12 @@
     <EmbeddedResource Include="frm_popup.resx">
       <DependentUpon>frm_popup.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< Updated upstream
-=======
     <EmbeddedResource Include="frm_RFIDreader.resx">
       <DependentUpon>frm_RFIDreader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_sistemaStarkillerUDP.resx">
       <DependentUpon>frm_sistemaStarkillerUDP.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> Stashed changes
     <EmbeddedResource Include="frm_splash.resx">
       <DependentUpon>frm_splash.cs</DependentUpon>
     </EmbeddedResource>

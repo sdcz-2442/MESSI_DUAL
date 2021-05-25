@@ -97,6 +97,12 @@
     <Compile Include="frm_admingestiousuaris.Designer.cs">
       <DependentUpon>frm_admingestiousuaris.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_BalisesActives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BalisesActives.Designer.cs">
+      <DependentUpon>frm_BalisesActives.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_baseStarKiller.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_admingestiousuaris.resx">
       <DependentUpon>frm_admingestiousuaris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BalisesActives.resx">
+      <DependentUpon>frm_BalisesActives.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_baseStarKiller.resx">
       <DependentUpon>frm_baseStarKiller.cs</DependentUpon>

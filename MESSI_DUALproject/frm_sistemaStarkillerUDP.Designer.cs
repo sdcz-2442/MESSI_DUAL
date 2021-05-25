@@ -30,9 +30,9 @@ namespace App
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_sistemaStarkillerUDP));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
             this.lbl_nom = new System.Windows.Forms.Label();
@@ -164,6 +164,7 @@ namespace App
             this.tbx_ipbase.Name = "tbx_ipbase";
             this.tbx_ipbase.Size = new System.Drawing.Size(161, 36);
             this.tbx_ipbase.TabIndex = 18;
+            this.tbx_ipbase.Text = "127.0.0.1";
             // 
             // tbx_portbase
             // 
@@ -172,6 +173,7 @@ namespace App
             this.tbx_portbase.Name = "tbx_portbase";
             this.tbx_portbase.Size = new System.Drawing.Size(161, 36);
             this.tbx_portbase.TabIndex = 19;
+            this.tbx_portbase.Text = "8000";
             // 
             // tbx_portsistema
             // 
@@ -180,6 +182,7 @@ namespace App
             this.tbx_portsistema.Name = "tbx_portsistema";
             this.tbx_portsistema.Size = new System.Drawing.Size(161, 36);
             this.tbx_portsistema.TabIndex = 20;
+            this.tbx_portsistema.Text = "4000";
             // 
             // tbx_sendmessages
             // 
@@ -188,6 +191,7 @@ namespace App
             this.tbx_sendmessages.Name = "tbx_sendmessages";
             this.tbx_sendmessages.Size = new System.Drawing.Size(249, 36);
             this.tbx_sendmessages.TabIndex = 21;
+            this.tbx_sendmessages.Text = "AYH";
             // 
             // pnl_status
             // 
@@ -236,20 +240,20 @@ namespace App
             // 
             // chart_grafica
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart_grafica.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_grafica.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.chart_grafica.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart_grafica.Legends.Add(legend4);
             this.chart_grafica.Location = new System.Drawing.Point(390, 218);
             this.chart_grafica.Name = "chart_grafica";
             this.chart_grafica.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Red;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart_grafica.Series.Add(series1);
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Red;
+            series4.Legend = "Legend1";
+            series4.Name = "Tiempo";
+            this.chart_grafica.Series.Add(series4);
             this.chart_grafica.Size = new System.Drawing.Size(401, 299);
             this.chart_grafica.TabIndex = 26;
             this.chart_grafica.Text = "chart1";

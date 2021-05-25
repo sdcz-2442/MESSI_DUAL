@@ -50,46 +50,28 @@ namespace MESSI_Client
                     sendData = Encoding.ASCII.GetBytes("SLP");
                     udpCli.Send(sendData, sendData.Length);
                     tbx_sendmessages.Clear();
-
-                    /*
-                     * simularem aquesta captació d’energia i enviarem cada mig segon el
-                        valor de la funció exponencial que ja havíem utilitzat anteriorment en el sprint #6 augmentant en un
-                        x i fins X=300.
-                     * */
-                    //pufalskjd
-                    string SKDmessage = "SKD";
+                    
                     int contador = 0;
 
-                    while (contador < 15)
+                    while (contador < 300)
                     {
-
+                        string SKDmessage = "SKD|";
                         SKDmessage += contador;
+                        SKDmessage += "|";
+
+                        double resultat = Math.Round(Math.Pow(Math.E, contador / 100.0), 6);
+
+                        SKDmessage += "" + resultat;
+
+                        sendData = Encoding.ASCII.GetBytes(SKDmessage.ToString().ToCharArray());
+                        udpCli.Send(sendData, sendData.Length);
+
+                        Thread.Sleep(100);
+
                         contador++;
+                        SKDmessage = "";
                     }
-
-                        if (contador < 1000)
-                        {
-                            double resultat = Math.Pow(Math.E, contador / 100.0);
-                        contador++;
-                            if (contador % 25 == 0)
-                            {
-                                resultat.ToString();
-                            }
-
-                            string time, temp;
-                            time = contador.ToString();
-                            temp = resultat.ToString();
-
-                            sendData = Encoding.ASCII.GetBytes(time + "," + temp);
-                            udpCli.Send(sendData, sendData.Length);
-
-                            Thread.Sleep(500);
-                            //tbx_sendmessages.Clear();
-                            //enviar 
-
-                        }
                 }
-
             }
         }
         private void btn_connect_Click(object sender, EventArgs e)

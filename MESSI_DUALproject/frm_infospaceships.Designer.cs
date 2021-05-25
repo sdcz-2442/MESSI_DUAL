@@ -248,7 +248,7 @@ namespace App
             this.label4.Size = new System.Drawing.Size(207, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Spaceship Technical Information";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // rtbx_description
             // 

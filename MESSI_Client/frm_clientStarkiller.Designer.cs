@@ -124,6 +124,7 @@ namespace MESSI_Client
             this.tbx_portsistema.Name = "tbx_portsistema";
             this.tbx_portsistema.Size = new System.Drawing.Size(161, 36);
             this.tbx_portsistema.TabIndex = 37;
+            this.tbx_portsistema.Text = "8000";
             // 
             // tbx_portbase
             // 
@@ -132,6 +133,7 @@ namespace MESSI_Client
             this.tbx_portbase.Name = "tbx_portbase";
             this.tbx_portbase.Size = new System.Drawing.Size(161, 36);
             this.tbx_portbase.TabIndex = 36;
+            this.tbx_portbase.Text = "4000";
             // 
             // tbx_ipbase
             // 
@@ -140,6 +142,7 @@ namespace MESSI_Client
             this.tbx_ipbase.Name = "tbx_ipbase";
             this.tbx_ipbase.Size = new System.Drawing.Size(161, 36);
             this.tbx_ipbase.TabIndex = 35;
+            this.tbx_ipbase.Text = "127.0.0.1";
             // 
             // label5
             // 
